@@ -1,4 +1,4 @@
-/* //condicionales
+//condicionales
 let numero=parseInt(prompt("Ingrese un numero"));
 if (numero==7){
     console.log("Acertaste");
@@ -39,7 +39,7 @@ let numUno="1";
 let sonIguales= (num1==numUno);
 console.log("los numeros son iguales "+sonIguales);
 let sonEstrictamenteIguales=(num1===numUno);
-console.log("los numeros son estrictamente iguales en tipo y valor: "+sonEstrictamenteIguales);*/
+console.log("los numeros son estrictamente iguales en tipo y valor: "+sonEstrictamenteIguales);
 
 //and /or
 let colorFavorito = prompt("Cual es mi color favorito?");
