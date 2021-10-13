@@ -1,4 +1,4 @@
-/* //objetos
+//objetos
 //objetos literales
 const lapicero = {
     color: "verde",
@@ -69,7 +69,7 @@ console.log( "origen" in persona1);
 //recorremos todas las propiedades del objeto con el ciclo for...in
 for (const propiedad in persona1) {
     console.log(persona1[propiedad]);//es obligatorio usar los corchetes, sino no lee
-}
+} 
 
 class Bicicleta{
     constructor(marca, color, condicion, precio) {
@@ -96,7 +96,7 @@ function f1(){
     return this;
 }
 
-console.log(f1());*/
+console.log(f1());
 
 class Producto {
     constructor(nombre, precio) {
