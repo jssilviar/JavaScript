@@ -95,21 +95,19 @@
 
 /*hoja de carrito de compras*/
 .gridCarro {
-  grid-template-areas: "carro" "carro" "carro" "carro" "carro" "carro"; }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, auto);
+  grid-template-areas: "cardCarrito tabla tabla";
+  grid-gap: 10px; }
 
-.carro {
-  background-color: #b8d17f;
-  text-align: center;
-  border: solid;
-  border-radius: 10px;
-  border-color: #f5db5d; }
-  .carro .div h2 {
-    color: #010e0e;
-    font-size: auto; }
-  .carro .div h3, .carro p {
-    font-size: 21px;
-    color: #010e0e;
-    margin: 5px; }
+.cardCarrito {
+  grid-area: cardCarrito;
+  width: 18rem;
+  text-align: center; }
+
+.tabla {
+  grid-area: tabla; }
 
 /*hoja de inicio*/
 .gridContainer {

@@ -56,6 +56,12 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                         <a class="btn btn-outline-dark" href="error.html" role="button">Buscar</a>
                     </form>
+                    <button id= "productos" type="button" class="btn btn-outline-dark">
+                       Productos <span class="badge bg-secondary">3</span>
+                    </button>
+                    <button type="button" class="btn btn-outline-dark">
+                        Iniciar sesión
+                    </button>
                 </div>
             </div>
         </nav>
@@ -63,8 +69,8 @@
     <main class="body__main">
         <div id="nombre">
         </div>
-        <div class="justify-content-md-center">
-            <div class="card" style="width: 18rem;">
+        <div class="gridCarro">
+            <div class="cardCarrito">
                 <img src="imagenes/tortaPajarito.jpg" class="card-img-top" alt="tortaPajarito">
                 <div class="card-body">
                 <h5 class="card-title font--big">Baby Shower</h5>
@@ -74,21 +80,20 @@
                 <li class="list-group-item font--medium">S/ 70.00</li>
                 </ul>
                 <div class="cantidad font--small">
-                    <input type="number" name="" id="" min="1" max="10" placeholder="1">
+                    <input type="number" name="" id="pedido" min="1" max="10" placeholder="1">
                     <a href="carritoDeCompras.html"
                     class="card-link font--small">Comprar</a>
-                    <input type="reset" value="Borrar" class="card-link"></a>
+                    <input id="reset" type="reset" value="Borrar" class="card-link"></a>
                 </div>
             </div>
-            <div class="product-device product-device-2 shadow-sm d-none d-md-block">
-                <label>EMPRESA:</label>
-                <input id="armaTuFiesta" type="text" placeholder="LadydiCakes">
-                <label>N° DE STOCK</label>
-                <input id="cantidad" type="number" placeholder="stock">
+            <div class="tabla">
+                <div class="product-device product-device-2 shadow-sm d-none d-md-block">
+                    <article id="inferior">
+                        <!-- Aqui tabla -->
+                    </article>
+                </div>
+               
             </div>
-            <article id="inferior">
-                <!-- Aqui tabla -->
-            </article>
         </div>
     </main>
     <footer class="body__footer footer">
@@ -116,6 +121,6 @@
         </div>
         <div class="copyright footer__copyright">2021 by Silvia Jesús Sánchez</div>
     </footer>
-    <script src="dom.js"></script>
+    <script src="eventos.js"></script>
 </body>
 </html>
