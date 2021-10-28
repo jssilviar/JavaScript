@@ -11,7 +11,7 @@ for(let i=0; i<6; i++){
 let listaACadena = listaDeCompras.toString();
 console.log( listaACadena);
 
-//PUSH
+//PUSH:añade un nuevo elemento
 listaDeCompras.push("postre");
 console.log(listaDeCompras); */
 
@@ -59,7 +59,7 @@ for (let alumno of listaAlumnos) {
 let promedio=acumuladorNotas/listaAlumnos.length;
 console.log("El promedio de la clase es: " +promedio);
 
-//FIND
+//FIND: encuentra el primer elemento que cumpla con la condicion pedida
 let alumnoAlberto = listaAlumnos.find(alumno => alumno.nombre === "Alberto Gonzales");
 console.log(alumnoAlberto);
 
@@ -95,7 +95,7 @@ for (const producto of productos){
    
 console.log(productos);
  
-//METODO MAP
+//METODO MAP: crea un nuevo array
 let precioConInflacion=productos.map(producto => producto.precio + 10);
 console.log(precioConInflacion);*/
 

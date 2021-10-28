@@ -57,8 +57,8 @@ do{
 }while(color!="s")
 
 //creo algoritmo que permita calcular el promedio de nota de un curso
-//opcion #1 sabiendo la cantidad exacta de alumnos
 
+//opcion #1 sabiendo la cantidad exacta de alumnos
 let sumatoria=0;
 for (let i = 1; i <= 5; i++) {
     let nota=parentInt(prompt("ingrese la nota del alumno :" +i));

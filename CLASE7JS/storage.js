@@ -1,3 +1,4 @@
+//sessionstorage o localstorage
 //storage
 let nombreUsu=prompt("Ingrese su nombre");
 localStorage.setItem("nombre", nombreUsu);
@@ -42,13 +43,14 @@ for (let i = 1; i <= 10; i++) {
 }
 
 //GUARDANDO OBJETOS EN STORAGE
+//con getItem das un dato, con setItem pides el dato
 
 //DE OBJETO A STRING
 localStorage.setItem("unEmpleado", JSON.stringify({ legajo: 12341,nombre: "Jorge Arias", sueldo:67000})
 );
 let jsonGuardado = localStorage.getItem("unEmpleado");
 console.log("Json guardado: " + jsonGuardado);
-//DE STRING A OBJETO
+//DE STRING A array de OBJETO
 let jsonAObjeto = JSON.parse(jsonGuardado);
 console.log("Json convertido nuevamente a objeto: ");
 console.log(jsonAObjeto);

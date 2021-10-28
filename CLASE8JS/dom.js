@@ -1,6 +1,6 @@
 //DOM
 //console.dir(document.body);
-
+//byID, byClassName, byTagName (con los 2 ultimos obtenemos un nuevo array)
 //ID
 let seccion = document.getElementById("principal");
 //console.log(seccion.innerHTML);
