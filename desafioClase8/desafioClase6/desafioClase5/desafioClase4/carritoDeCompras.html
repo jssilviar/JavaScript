@@ -86,9 +86,33 @@
                     <input id="reset" type="reset" value="Borrar" class="card-link"></a>
                 </div>
             </div>
+            <div class="formulario">
+                <form action="" onsubmit="datoCliente(event)">
+                    <label for="inputNombre">Modelo de torta</label>
+                    <select name="" id="inputNombre">
+                        <option value="redondo" selected>Redondo</option>
+                        <option value="cuadrado" >Cuadrado</option>
+                        <option value="rectangular">Rectangular</option>
+                        <option value="personalizado">Personalizado</option>
+                    </select>
+
+                    <label for="inputNombre1">Cantidad de personas:</label>
+                    <input type="text" name="" id="inputNombre1">
+
+                    <label for="inputNombre2">Temática:</label>
+                    <input type="text" name="" id="inputNombre2">
+
+                    <label for="inputNombre3">Tipo de celebración:</label>
+                    <input type="text" name="" id="inputNombre3">
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
             <div class="tabla">
                 <div class="product-device product-device-2 shadow-sm d-none d-md-block">
                     <article id="inferior">
+                        <!-- Aqui tabla -->
+                    </article>
+                    <article id="inferior2">
                         <!-- Aqui tabla -->
                     </article>
                 </div>
@@ -124,3 +148,32 @@
     <script src="eventos.js"></script>
 </body>
 </html>
+<!-- function lista(){
+    let tabla = document.createElement("table");
+    tabla.setAttribute("class","table table-success table-striped");
+
+    let tablaHead = document.createElement("thead");
+    tablaHead.innerHTML = `<thead>
+                                <tr>
+                                    <th scope="col">Productos</th>
+                                    <th scope="col">Desde</th>
+                                </tr>
+                            </thead>`;
+    let tablaBody = document.createElement("tbody");
+    for (const producto of productos){
+        let fila=document.createElement("tr");
+        fila.innerHTML = `<td> ${producto.nombre}</td>
+        <td><b>S/${producto.precio}.00</b></td>`;
+        tablaBody.appendChild(fila);
+    }
+    tabla.appendChild(tablaHead);
+    tabla.appendChild(tablaBody);
+
+    document.getElementById("inferior").appendChild(tabla);
+} 
+
+let botonReset = document.getElementById("reset");
+let pedido = document.getElementById("pedido");
+botonReset.addEventListener("click", () => {
+    pedido.value = 0;
+});-->

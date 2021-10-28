@@ -106,8 +106,8 @@ $fonts: (
     .gridCarro{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(1, auto);
-        grid-template-areas: "cardCarrito tabla tabla";
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "cardCarrito formulario formulario" "cardCarrito tabla tabla";
         grid-gap: 10px;
     }
     .cardCarrito{
@@ -117,6 +117,9 @@ $fonts: (
     }
     .tabla{
         grid-area: tabla;
+    }
+    .formulario{
+        grid-area: formulario;
     }
     
     
