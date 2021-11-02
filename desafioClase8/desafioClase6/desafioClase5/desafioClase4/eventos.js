@@ -27,7 +27,7 @@ function saludo () {
 
 //saludo();
 
-const productos =[{ nombre:"Catering", precio :100 },
+/* const productos =[{ nombre:"Catering", precio :100 },
                   { nombre:"Cakes", precio:80 },
                   { nombre:"Backing Pallet", precio:30 }];
 
@@ -117,9 +117,103 @@ function datoCliente(event){
         
     }
    
+} 
+
+//creo contendor que tendra los productos
+let contenedor = document.createElement("div");
+contenedor.innerHTML = `me estoy frustando`;
+
+
+//poniendo que el contenedor se apile en productosSelecionados
+productosSeleccionados.appendChild(contenedor);*/
+
+const productos = [{
+        id: 1,
+        nombre: "catering",
+        imagen: "galletas.png",
+        desc: "fsdfsg",
+        precio: 30
+    }, {
+        id: 2,
+        nombre:"backing pallet",
+        imagen: "palletBlanco.png",
+        desc: "xdgdzg",
+        precio: 100
+    }, {
+        id: 3,
+        nombre: "cakes",
+        imagen: "tortaBautizo.png",
+        desc: "dgfsdg",
+        precio: 60
+    }
+];
+
+let carrito = [];
+
+//tomo el div productosSelecionados para añadir ahi el contenedor
+let productosSeleccionados = document.getElementById("productosSeleccionados");
+
+let tituloTotalUnidades = document.createElement("h3");
+tituloTotalUnidades.innerText = "0";
+productosSeleccionados.appendChild(tituloTotalUnidades);
+
+
+for(const producto of productos){
+    let contenedor = document.createElement("div");
+    contenedor.innerHTML = `
+    <div class="card">
+        <img src="./imagenes/${producto.imagen}" class="card-img-top" alt="${producto.imagen}">
+        <div class="card-body">
+            <h5 class="card-title font--big">${producto.nombre}</h5>
+            <p class="card-text font--large">${producto.desc}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item font--medium">${producto.precio}</li>
+        </ul>
+        <div class="cantidad font--small">
+            <input type="number" name="" id="pedido" min="1" max="10" placeholder="1">
+            <button id="${producto.id}">Añadir</button></a>
+            <input id="reset" type="reset" value="Borrar" class="card-link">
+        </div>
+    </div>
+    <p style="display: none">${producto.id}</p>`;
+
+    productosSeleccionados.appendChild(contenedor);
+    document.getElementById(`${producto.id}`).onclick = () => agregarAlCarrito(`${producto.id}`)
+}
+ function agregarAlCarrito(id) {
+     carrito.push(productos[id-1]);
+     console.log(carrito);
+     calcularTotalCarrito();
+}
+let botonClear = document.createElement("button");
+botonClear.setAttribute("id","clear");
+botonClear.innerText = "VACIAR CARRITO";
+productosSeleccionados.appendChild(botonClear);
+botonClear.onclick = () => {
+    carrito = [];
+    tituloPrecios.innerText = "0";
+    tituloTotalUnidades.innerText = "0";
+}
+console.log(carrito);
+
+function calcularTotalCarrito (){
+    let total = 0;
+    for(const prod of carrito) {
+        total += prod.precio;
+        console.log(total);
+    }
+    tituloPrecios.innerText= total;
+    tituloTotalUnidades.innerText = carrito.length;
 }
 
+let tituloTotalCompra = document.createElement("h2");
+tituloTotalCompra.innerText = "El total de tu compra es: S/ ";
+productosSeleccionados.appendChild(tituloTotalCompra);
 
+let tituloPrecios = document.createElement("h2");
+tituloPrecios.innerText = "Cantidad de productos: 0";
+productosSeleccionados.appendChild(tituloPrecios);
 
 
 

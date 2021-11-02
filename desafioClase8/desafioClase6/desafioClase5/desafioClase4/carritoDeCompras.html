@@ -70,23 +70,9 @@
         <div id="nombre">
         </div>
         <div class="gridCarro">
-            <div class="cardCarrito">
-                <img src="imagenes/tortaPajarito.jpg" class="card-img-top" alt="tortaPajarito">
-                <div class="card-body">
-                <h5 class="card-title font--big">Baby Shower</h5>
-                <p class="card-text font--large">Torta de vainilla, #24, forrado con masa elástica y pajarito blanco con toques de rosas.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                <li class="list-group-item font--medium">S/ 70.00</li>
-                </ul>
-                <div class="cantidad font--small">
-                    <input type="number" name="" id="pedido" min="1" max="10" placeholder="1">
-                    <a href="carritoDeCompras.html"
-                    class="card-link font--small">Comprar</a>
-                    <input id="reset" type="reset" value="Borrar" class="card-link"></a>
-                </div>
-            </div>
-            <div class="formulario">
+            <div id="productosSeleccionados"></div>
+            
+           <!--  <div class="formulario">
                 <form action="" onsubmit="datoCliente(event)">
                     <label for="inputNombre">Modelo de torta</label>
                     <select name="" id="inputNombre">
@@ -106,7 +92,7 @@
                     <input type="text" name="" id="inputNombre3">
                     <input type="submit" value="Enviar">
                 </form>
-            </div>
+            </div> -->
             <div class="tabla">
                 <div class="product-device product-device-2 shadow-sm d-none d-md-block">
                     <article id="inferior">
@@ -148,32 +134,3 @@
     <script src="eventos.js"></script>
 </body>
 </html>
-<!-- function lista(){
-    let tabla = document.createElement("table");
-    tabla.setAttribute("class","table table-success table-striped");
-
-    let tablaHead = document.createElement("thead");
-    tablaHead.innerHTML = `<thead>
-                                <tr>
-                                    <th scope="col">Productos</th>
-                                    <th scope="col">Desde</th>
-                                </tr>
-                            </thead>`;
-    let tablaBody = document.createElement("tbody");
-    for (const producto of productos){
-        let fila=document.createElement("tr");
-        fila.innerHTML = `<td> ${producto.nombre}</td>
-        <td><b>S/${producto.precio}.00</b></td>`;
-        tablaBody.appendChild(fila);
-    }
-    tabla.appendChild(tablaHead);
-    tabla.appendChild(tablaBody);
-
-    document.getElementById("inferior").appendChild(tabla);
-} 
-
-let botonReset = document.getElementById("reset");
-let pedido = document.getElementById("pedido");
-botonReset.addEventListener("click", () => {
-    pedido.value = 0;
-});-->
