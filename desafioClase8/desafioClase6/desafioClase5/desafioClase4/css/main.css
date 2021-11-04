@@ -16,7 +16,12 @@
     grid-area: main;
     padding-left: 3%;
     padding-right: 3%;
-    margin: 2%; }
+    margin: 2%;
+    display: grid; }
+    .body__main--carrito {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "carrito carrito resumen"; }
   .body__footer {
     grid-area: footer; }
   .body__h1 {
@@ -59,7 +64,8 @@
   .catering .div--h2 {
     color: #010e0e;
     font-size: auto; }
-  .catering .div--h3, .catering p {
+  .catering .div--h3,
+  .catering p {
     font-size: 21px;
     color: #010e0e;
     margin: 5px; }
@@ -95,29 +101,25 @@
 
 /*hoja de carrito de compras*/
 .gridCarro {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas: "cardCarrito formulario formulario" "cardCarrito tabla tabla";
-  grid-gap: 10px; }
+  grid-area: carrito;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; }
+
+.resumen {
+  grid-area: resumen; }
 
 .cardCarrito {
-  grid-area: cardCarrito;
-  width: 18rem;
+  width: 15rem;
   text-align: center; }
-
-.tabla {
-  grid-area: tabla; }
-
-.formulario {
-  grid-area: formulario; }
 
 /*hoja de inicio*/
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, auto);
-  grid-template-areas: "img1 img2x2 img2x2 nota1" "img2 img2x2 img2x2 nota2" "img3 novProm novProm nota3";
+  grid-template-areas: "img1 img2x2 img2x2 nota1" "img2 img2x2 img2x2 nota2" "img3 novProm novProm nota3";
   grid-gap: 10px;
   padding: 5px; }
   .gridContainer__protocol {
