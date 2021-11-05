@@ -1,107 +1,88 @@
-//FUNCION SALUDAR
-const saludos = [
-    "Buen día, ",
-    "Buenos días, ",
-    "Que agradable verte nuevamente, ",
-    "Bienvenido/a, ",
-    "Hola, ¿Cómo estás?, ",
-    "Hola, "
-];
-
-function aleatorio(miArray) {
-    let max = miArray.length - 1;
-    let min = 0;
-    let random = Math.round(Math.random() * (max - min)) + min;
-    let saludoAleatorio = miArray[random];
-    return saludoAleatorio;
-}
-
-function saludo() {
-    let nombre = prompt("Ingresa tu nombre");
-    let etiquetaNombre = document.getElementById("nombre");
-    etiquetaNombre.innerText = aleatorio(saludos) + nombre;
-    etiquetaNombre.style.font = "bold";
-    etiquetaNombre.style.fontSize = "40px";
-    etiquetaNombre.style.textAlign = "center";
-}
-
-//saludo();
-
-let carrito = [];
-
-//tomo el div productosSelecionados para añadir ahi el contenedor
-let productosSeleccionados = document.getElementById("productosSeleccionados");
-
-let tituloTotalUnidades = document.createElement("h3");
-tituloTotalUnidades.innerText = "0";
-productosSeleccionados.appendChild(tituloTotalUnidades);
-
+let gridCarro = document.getElementById("gridCarro");
 for (const producto of productos) {
-    let contenedor = document.createElement("div");
-    contenedor.innerHTML = `
-    <div class="card">
+    let cardProducto = document.createElement("div");
+    cardProducto.setAttribute("class", "cardCarrito");
+    cardProducto.innerHTML = `
         <img src="./imagenes/${producto.imagen}" class="card-img-top" alt="${producto.imagen}">
         <div class="card-body">
-            <h5 class="card-title font--big">${producto.nombre}</h5>
+            <h5 id="nombre-producto-${producto.id}" class="card-title font--big">${producto.nombre}</h5>
             <p class="card-text font--large">${producto.desc}</p>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item font--medium">S/ ${producto.precio}.00</li>
+            <li class="list-group-item font--medium">S/ <span id="precio-producto-${producto.id}">${producto.precio}</span></li>
         </ul>
         <div class="cantidad font--small">
-            <input type="number" name="" id="pedido" min="1" max="10" placeholder="1">
             <button id="${producto.id}">Añadir</button>
             <button id="reset-${producto.id}" class="card-link" onclick="borre()">Borrar</button>
         </div>
-    </div>
     <p style="display: none">${producto.id}</p>`;
 
-    productosSeleccionados.appendChild(contenedor);
+    gridCarro.appendChild(cardProducto);
 
     document.getElementById(`${producto.id}`).onclick = () => agregarAlCarrito(`${producto.id}`);
 }
 
+let carrito = [];
+
+let carritoSize = document.getElementById("cantidadProductos");
+let detalleProductos = document.getElementById(`detalleProductos`);
 
 function agregarAlCarrito(id) {
-    carrito.push(productos[id - 1]);
-    console.log(carrito);
-    calcularTotalCarrito();
-}
+    let precioProducto = document.getElementById(`precio-producto-${id}`).textContent;
+    let productoNombre = document.getElementById(`nombre-producto-${id}`).textContent;
+    if (carrito.length === 0) {
+        carrito.push({
+            idProducto: id,
+            productoNombre: productoNombre,
+            unidades: 1,
+            precioProducto: precioProducto
+        });
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+    } else {
+        let carritoGuardado = localStorage.getItem("carrito");
+        //Recuperé el carrito en JSON
+        let carritoJSON = JSON.parse(carritoGuardado);
 
-let botonClear = document.createElement("button");
-//que atributo quiero que tenga el boton botonClear
-botonClear.setAttribute("id", "clear");
-botonClear.innerText = "VACIAR CARRITO";
-productosSeleccionados.appendChild(botonClear);
-botonClear.onclick = () => {
-    carrito = [];
-    tituloPrecios.innerText = "0";
-    tituloTotalUnidades.innerText = "0";
-
-}
-console.log(carrito);
-
-//boton borrar
-let botonBorrar1 = document.getElementById("reset-1");
-let botonBorrar2 = document.getElementById("reset-2");
-let botonBorrar3 = document.getElementById("reset-3");
-
-function borre() {
-    console.log("borre el producto");
-    let bolsa = carrito.length - 1;
-    tituloTotalUnidades.innerText = bolsa;
-}
-
-function calcularTotalCarrito() {
-    let total = 0;
-    for (const prod of carrito) {
-        total += prod.precio;
-        console.log(total);
+        //buscar si dentro del array existe el id ingresado
+        existeId(carritoJSON, id, productoNombre, precioProducto);
     }
-    tituloPrecios.innerText = total;
-    tituloTotalUnidades.innerText = carrito.length;
+    actualizarCarrito();
 }
 
-let tituloPrecios = document.createElement("h2");
-tituloPrecios.innerText = "0";
-productosSeleccionados.appendChild(tituloPrecios);
+function existeId(arreglo, idIngresado, nombreIngresado, precioIngresado) {
+    let producto = arreglo.find(item => item.idProducto === idIngresado);
+    if (producto === undefined) {
+        arreglo.push({
+            idProducto: idIngresado,
+            productoNombre: nombreIngresado,
+            unidades: 1,
+            precioProducto: precioIngresado
+        });
+        localStorage.setItem("carrito", JSON.stringify(arreglo));
+    } else {
+        producto.unidades += 1;
+        localStorage.setItem("carrito", JSON.stringify(arreglo));
+    }
+}
+
+function actualizarCarrito() {
+    let carritoString = localStorage.getItem("carrito");
+    let carrito = JSON.parse(carritoString);
+    let unidades = 0;
+    for (let item of carrito) {
+        unidades += item.unidades
+    }
+    carritoSize.textContent = unidades;
+    actualizarDetalle();
+}
+
+function actualizarDetalle() {
+    detalleProductos.innerHTML = "";
+    let carritoString = localStorage.getItem("carrito");
+    let carrito = JSON.parse(carritoString);
+    for (let producto of carrito) {
+        let linea = document.createElement("pre");
+        linea.innerHTML = `<li>${producto.productoNombre} (${producto.unidades})        S/${Math.round(producto.precioProducto * producto.unidades)}.00</li>`;
+        detalleProductos.appendChild(linea);
+    }
+}

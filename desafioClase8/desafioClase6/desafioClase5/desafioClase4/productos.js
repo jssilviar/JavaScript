@@ -20,10 +20,10 @@ const productos = [{
         precio: "60.30"
     },
     {
-        id: 3,
-        nombre: "Cakes",
-        imagen: "tortaBautizo.png",
-        desc: "Torta de vainilla, chocochip o chocolate. N° 24 y N° 20.",
-        precio: "60.50"
+        id: 4,
+        nombre: "Paquete completo",
+        imagen: "slider6.png",
+        desc: "Torta de vainilla, chocochip o chocolate. Circular + carreta + arco de globos + pallet redondo blanco.",
+        precio: "650.00"
     },
 ]
