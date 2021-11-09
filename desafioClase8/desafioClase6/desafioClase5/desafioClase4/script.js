@@ -1,3 +1,7 @@
+if (localStorage.getItem("carrito")) {
+    localStorage.removeItem("carrito");
+}
+
 let gridCarro = document.getElementById("gridCarro");
 for (const producto of productos) {
     let cardProducto = document.createElement("div");
@@ -34,6 +38,8 @@ let carritoSize = document.getElementById("cantidadProductos");
 let detalleProductos = document.getElementById(`detalleProductos`);
 let btnVaciarCarrito = document.getElementById(`btnVaciarCarrito`);
 
+$("#mostrarOcultar").hide();
+
 function agregarAlCarrito(id) {
     let precioProducto = document.getElementById(`precio-producto-${id}`).textContent;
     let productoNombre = document.getElementById(`nombre-producto-${id}`).textContent;
@@ -47,6 +53,8 @@ function agregarAlCarrito(id) {
             precioProducto: precioProducto
         });
         localStorage.setItem("carrito", JSON.stringify(carrito));
+        $("#mostrarOcultar").show();
+
     } else {
         let carritoGuardado = localStorage.getItem("carrito");
         //Recuperé el carrito en JSON
@@ -117,8 +125,19 @@ const alertar = () => {
             carrito.length = 0;
             carritoSize.textContent = 0;
             btnVaciarCarrito.disabled = true;
+            $("#mostrarOcultar").hide();
         } else if (result.isDenied) {
             Swal.fire('No se ha eliminado los productos', '', 'info')
         }
     })
 }
+
+//mostrarOcultar detalles del carro de compras
+$("#mostrarOcultar").click(function() {
+    if ($("#mostrarOcultar").html() == "Ocultar") {
+        $("#mostrarOcultar").html(" Mostrar");
+    } else {
+        $("#mostrarOcultar").html("Ocultar");
+    }
+    $("#detalleProductos").fadeToggle(1000);
+});

@@ -48,7 +48,7 @@
                             </a>
                         </li>
                         <li class="nav-item header__sombra">
-                            <a class="nav-link" href="carritoDeCompras.html">
+                            <a id="listaCarrito" class="nav-link" href="carritoDeCompras.html">
                                 <img src="imagenes/iconoCarroDeCompras.svg" alt="carritoDeCompras" class="header__img" title="ver mi carrito">
                             </a>
                         </li>
@@ -58,7 +58,7 @@
                         <a class="btn btn-outline-dark" href="error.html" role="button">Buscar</a>
                     </form>
                     <button id="productos" type="button" class="btn btn-outline-dark">
-                       Productos <span class="badge bg-secondary">3</span>
+                       Productos <span class="badge bg-secondary"></span>
                     </button>
                     <button type="button" class="btn btn-outline-dark">
                         Iniciar sesión
@@ -74,6 +74,7 @@
             <h3>Resumen de la compra</h3>
             <div id="detalle">
                 <p>Cantidad de productos: <span id="cantidadProductos">0</span></p>
+                <button class="btn btn-warning" id="mostrarOcultar">Ocultar</button>
                 <div id="detalleProductos"></div>
                 <div id="vaciarCarrito">
 
