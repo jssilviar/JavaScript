@@ -141,3 +141,18 @@ $("#mostrarOcultar").click(function() {
     }
     $("#detalleProductos").fadeToggle(1000);
 });
+
+//Ajax
+function obtenerPersonajes() {
+    const URLGET = "http://hp-api.herokuapp.com/api/characters";
+    $.get(URLGET).done(function(respuesta, estado) {
+        console.log("Los personajes de Harry Potter son: " + estado);
+        if (estado == "success") {
+            let arrayPersonajes = respuesta.personajes;
+            arrayPersonajes.forEach(personajes => {
+                $("#personajes").append("<tr><td>" + personajes.name + "</td><td>" + personajes.house + "</td><td><img src=" + personajes.image + "></td></tr>");
+            });
+        }
+    });
+}
+obtenerPersonajes();
