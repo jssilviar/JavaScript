@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap");
+* {
+  margin: 0%;
+  padding: 0%; }
+
+.body {
+  background-color: #eef1a8;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+  font-family: "Josefin Sans", sans-serif; }
+  .body__header {
+    grid-area: header; }
+  .body__main {
+    grid-area: main;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin: 2%;
+    display: grid; }
+    .body__main--carrito {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "carrito carrito resumen"; }
+  .body__footer {
+    grid-area: footer; }
+  .body__h1 {
+    color: #022525;
+    text-align: center; }
+
+.font--small {
+  font-size: 15px; }
+
+.font--medium {
+  font-size: 18px; }
+
+.font--large {
+  font-size: 19px; }
+
+.font--big {
+  font-size: 22px; }
+
+.novProm {
+  grid-area: novProm;
+  color: #010e0e;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; }
+  .novProm .novProm-header {
+    text-align: center; }
+  .novProm .blockquote-footer {
+    text-align: center; }
+
+/*hoja de catering*/
+.gridCatering {
+  grid-template-areas: "catering" "catering" "catering" "catering" "catering" "catering"; }
+
+.catering {
+  background-color: darkkhaki;
+  text-align: center;
+  border: solid;
+  border-radius: 10px;
+  border-color: #6b6856; }
+  .catering .div--h2 {
+    color: #010e0e;
+    font-size: auto; }
+  .catering .div--h3,
+  .catering p {
+    font-size: 21px;
+    color: #010e0e;
+    margin: 5px; }
+
+.rowList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "col col col" "col col col"; }
+
+.card {
+  margin: 2vh;
+  border-radius: 5%; }
+  .card .cantidad {
+    padding: 5px;
+    background-color: darkkhaki; }
+  .card .card-title {
+    text-align: center; }
+  .card .card-body {
+    background-color: darkkhaki; }
+  .card .card-link {
+    font-size: 15px;
+    color: #010e0e;
+    padding: 5px 10px;
+    cursor: pointer; }
+  .card .list-group-item {
+    text-align: center;
+    background-color: #f5db5d; }
+
+.precio {
+  text-align: center;
+  background-color: #f5db5d; }
+
+/*hoja de carrito de compras*/
+.gridCarro {
+  grid-area: carrito;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; }
+
+.resumen {
+  grid-area: resumen; }
+
+.cardCarrito {
+  width: 15rem;
+  text-align: center; }
+
+.hp-image {
+  width: 80px;
+  height: 120px; }
+
+/*hoja de inicio*/
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "img1 img2x2 img2x2 nota1" "img2 img2x2 img2x2 nota2" "img3 novProm novProm nota3";
+  grid-gap: 10px;
+  padding: 5px; }
+  .gridContainer__protocol {
+    grid-area: nota1;
+    background-color: #f5db5d;
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+    text-align: left;
+    justify-content: center; }
+    .gridContainer__protocol h2 {
+      text-align: center;
+      color: #010e0e; }
+  .gridContainer__pagaCon {
+    grid-area: nota2; }
+    .gridContainer__pagaCon h2 {
+      text-align: center;
+      color: #010e0e; }
+  .gridContainer__nota {
+    grid-area: nota3;
+    background-color: #f5db5d;
+    list-style: none;
+    text-align: start;
+    border-radius: 10%;
+    color: #010e0e;
+    padding: 60px 5px 40px 10px; }
+    .gridContainer__nota:hover {
+      transform: rotatey(-360deg);
+      transition: transform 2s; }
+
+.muffin {
+  list-style: square inside url(../imagenes/muffin.svg); }
+
+.img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+  height: auto; }
+
+.indexBacking {
+  grid-area: img1; }
+
+.indexCakes {
+  grid-area: img2; }
+
+.indexCatering {
+  grid-area: img3; }
+
+.slider {
+  grid-area: img2x2; }
+  .slider .img {
+    width: 100%; }
+  .slider .h2 {
+    display: block; }
+
+.img-overlay {
+  position: relative;
+  max-width: 300px; }
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(245, 219, 93, 0.5);
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  color: #010e0e;
+  font-size: 2rem;
+  padding: 30px;
+  text-align: center; }
+
+.img-overlay:hover .overlay {
+  opacity: 1; }
+
+/*hoja ubicacion*/
+.ubicacion {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, auto);
+  grid-template-areas: "h1 iframe iframe iframe nota";
+  margin: 2%; }
+  .ubicacion h1 {
+    flex-grow: 1;
+    grid-area: h1; }
+  .ubicacion iframe {
+    flex-grow: 3;
+    grid-area: iframe; }
+  .ubicacion .notaUbicacion {
+    flex-grow: 1;
+    grid-area: nota;
+    background-color: #f5db5d;
+    text-align: start;
+    border-radius: 10%;
+    color: #010e0e;
+    padding: 60px 5px 40px 5px; }
+    .ubicacion .notaUbicacion .nota:hover {
+      transform: rotatey(-360deg);
+      transition: transform 2s; }
+
+.videoDad {
+  text-align: center;
+  height: 50vh; }
+
+.video {
+  width: 40%;
+  height: 100%; }
+
+.name {
+  font-size: big;
+  font-weight: bold; }
+
+.header {
+  width: 100%;
+  background-color: #f5db5d; }
+  .header__img {
+    width: 28px; }
+  .header__sombra {
+    background-color: #010e0e; }
+  .header .contacto-icon {
+    background-image: url(../img/contacto.svg);
+    width: 28px; }
+  .header .ubicacion-icon {
+    background-image: url(../img/ubicacion.svg);
+    width: 28px; }
+  .header .carritoDeCompras-icon {
+    background-image: url(../img/carritoDeCompras.svg);
+    width: 28px; }
+  .header__logo:hover {
+    transform: scalex(1.2);
+    cursor: pointer;
+    transition: transform 1s; }
+  .header__grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 650px);
+    grid-gap: 10px;
+    padding: 5px; }
+  .header .name {
+    font-size: big;
+    font-weight: bold; }
+
+.footer {
+  background-color: #f5db5d;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "contacto info1 iconos" "copyright copyright copyright"; }
+  .footer__contacto {
+    padding: 10px;
+    font-size: 50px;
+    grid-area: contacto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #010e0e; }
+  .footer__datos {
+    grid-area: info1;
+    text-align: left; }
+  .footer__social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .footer__social a img {
+      width: 40px;
+      height: 40px; }
+    .footer__social .whatsapp-icon {
+      background-image: url(../img/whatsapp.png);
+      margin: 5px;
+      grid-area: iconos; }
+    .footer__social .instagram-icon {
+      background-image: url(../img/instagram.png);
+      margin: 5px;
+      grid-area: iconos; }
+    .footer__social .gmail-icon {
+      background-image: url(../img/gmail.png);
+      margin: 5px;
+      grid-area: iconos; }
+    .footer__social .twitter-icon {
+      background-image: url(../img/twitter.png);
+      margin: 5px;
+      grid-area: iconos; }
+    .footer__social .facebook-icon {
+      background-image: url(../img/facebook.png);
+      margin: 5px;
+      grid-area: iconos; }
+  .footer__copyright {
+    text-align: center;
+    grid-area: copyright;
+    background-color: #eef1a8; }
+  .footer .name {
+    font-size: big;
+    font-weight: bold; }
+
+@media only screen and (max-width: 1024px) {
+  .contenedor li a {
+    font-size: 15px; }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto); }
+  .gridContainer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "img1 img2 img3" "img2x2 img2x2 img2x2" "novProm novProm novProm" "nota1 nota2 nota3"; }
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "col col" "col col" "col col";
+    justify-content: center; } }
+
+@media only screen and (max-width: 768px) {
+  .body {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header" "main" "footer";
+    font-size: 18px; }
+    .body .main {
+      text-align: -webkit-center; }
+  .contenedor li a {
+    font-size: 15px; }
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, auto); }
+  .gridContainer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas: "img1" "img2" "img3" "img2x2" "novProm" "nota1" "nota2" "nota3";
+    text-align: -webkit-center; }
+  .row {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "col" "col" "col" "col" "col" "col";
+    justify-content: center; }
+  .footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "contacto" "info1" "iconos" "copyright"; }
+    .footer__contacto {
+      font-size: 46px;
+      justify-content: center; }
+    .footer__datos {
+      text-align: center; }
+  .ubicacion {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "h1" "iframe" "nota"; }
+  .video {
+    width: 80%; } }
+
+.body-error {
+  background-color: #eef1a8; }
+
+.error {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "container container content"; }
+  .error .container {
+    grid-area: container; }
+    .error .container .font-error {
+      font-size: 80px;
+      color: darkred; }
+    .error .container .img-fluid {
+      width: 100%;
+      align-content: center;
+      border-radius: 5%; }
+  .error .content {
+    grid-area: content;
+    text-align: center;
+    padding: 100px 10px; }
+    .error .content .content-error {
+      font-size: 30px;
+      color: darkblue; }
+    .error .content .img-logo {
+      width: 30vh; }
