@@ -103,12 +103,30 @@ function actualizarDetalle() {
         let totalItem
         let totalCompra
         for (let producto of carrito) {
-            let linea = document.createElement("pre");
-            linea.innerHTML = `<li>${producto.productoNombre} (${producto.unidades})        S/${Number(producto.precioProducto * producto.unidades).toFixed(2)}</li>`;
+            let linea = document.createElement("tr");
+            linea.innerHTML = `<td>${producto.productoNombre} (${producto.unidades})</td><td> S/${Number(producto.precioProducto * producto.unidades).toFixed(2)}<button id="btn-delete-${producto.idProducto}" onclick="deleteProduct(${producto.idProducto})">Eliminar</button></td>`;
             detalleProductos.appendChild(linea);
+            totalCompra = +(producto.precioProducto * producto.unidades);
+            console.log(totalCompra);
         }
     }
 }
+
+/*function deleteProduct(id) {
+    console.log("Eliminando el producto:", id);
+    let carritoString = localStorage.getItem("carrito");
+    let carrito = JSON.parse(carritoString);
+    carrito.find(item => {
+        if (id === item.idProducto) {
+
+        }
+    })
+}
+
+ 
+$(`#eliminar${productoNombre}`).click(function()){
+    let eliminarProd
+} */
 
 const alertar = () => {
     let fecha = new Date().toLocaleDateString();
