@@ -53,16 +53,6 @@
                             </a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <a class="btn btn-outline-dark" href="error.html" role="button">Buscar</a>
-                    </form>
-                    <button id="productos" type="button" class="btn btn-outline-dark">
-                       Productos <span class="badge bg-secondary"></span>
-                    </button>
-                    <button type="button" class="btn btn-outline-dark">
-                        Iniciar sesión
-                    </button>
                 </div>
             </div>
         </nav>
@@ -74,27 +64,12 @@
             <h3>Resumen de la compra</h3>
             <div id="detalle">
                 <p>Cantidad de productos: <span id="cantidadProductos">0</span></p>
+                <p>Total S/ <span id="totalCompra">0.00</span></p>
                 <button class="btn btn-warning" id="mostrarOcultar">Ocultar</button>
                 <div id="detalleProductos"></div>
-                <div id="vaciarCarrito">
-
-                </div>
+                <div id="vaciarCarrito"></div>
             </div>
         </div>
-        <section>
-            <table class="table table-warning">
-                <thead>
-                    <tr>
-                        <th>Personaje</th>
-                        <th>Imagen</th>
-                        <th>Casa</th>
-                    </tr>
-                </thead>
-                <tbody id="personajes">
-                    <!-- aca ingresan los datos del json Harry Potter -->
-                </tbody>
-            </table>
-        </section>
     </main>
     <footer class="body__footer footer">
         <div class="contacto footer__contacto name">Contáctanos en:

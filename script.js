@@ -41,7 +41,7 @@ let btnVaciarCarrito = document.getElementById(`btnVaciarCarrito`);
 $("#mostrarOcultar").hide();
 
 function agregarAlCarrito(id) {
-    let precioProducto = document.getElementById(`precio-producto-${id}`).textContent;
+    let precioProducto = parseFloat(document.getElementById(`precio-producto-${id}`).textContent);
     let productoNombre = document.getElementById(`nombre-producto-${id}`).textContent;
     let carritoString = localStorage.getItem("carrito");
     if (carritoString == null) {
@@ -100,6 +100,8 @@ function actualizarDetalle() {
     } else {
         detalleProductos.innerHTML = "";
         let carrito = JSON.parse(carritoString);
+        let totalItem
+        let totalCompra
         for (let producto of carrito) {
             let linea = document.createElement("pre");
             linea.innerHTML = `<li>${producto.productoNombre} (${producto.unidades})        S/${Number(producto.precioProducto * producto.unidades).toFixed(2)}</li>`;
@@ -141,23 +143,3 @@ $("#mostrarOcultar").click(function() {
     }
     $("#detalleProductos").fadeToggle(1000);
 });
-
-//Ajax
-function obtenerPersonajes() {
-    const URLGET = "http://hp-api.herokuapp.com/api/characters";
-    $.get(URLGET).done(function(respuesta, estado) {
-        console.log("Los personajes de Harry Potter son: " + estado);
-        if (estado == "success") {
-            respuesta.forEach( personaje => {
-                $("#personajes").append(`
-                    <tr>
-                        <td>${personaje.name}</td>
-                        <td><img src="${personaje.image}" class="hp-image"></td>
-                        <td>${personaje.house}</td>
-                    </tr>
-                `);
-            });            
-        }
-    });
-}
-obtenerPersonajes();
