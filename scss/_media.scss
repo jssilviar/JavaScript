@@ -1,70 +1,71 @@
-@media only screen and (max-width: 1024px){
-    .contenedor li a{
+@media only screen and (max-width: 1024px) {
+    .contenedor li a {
         font-size: 15px;
     }
-    .grid{
+    .grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, auto);
     }
-    .gridContainer{
+    .gridContainer {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, auto);
-        grid-template-areas:"img1 img2 img3" "img2x2 img2x2 img2x2" "novProm novProm novProm" "nota1 nota2 nota3";
+        grid-template-areas: "img1 img2 img3" "img2x2 img2x2 img2x2" "novProm novProm novProm" "nota1 nota2 nota3";
     }
-    .row{
+    .row {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(6, auto);
-        grid-template-areas:"col col" "col col" "col col";
+        grid-template-areas: "col col" "col col" "col col";
         justify-content: center;
     }
-}  
-@media only screen and (max-width: 768px){
-	.body{
-		grid-template-columns: repeat(1, 1fr);
-		grid-template-rows: auto auto auto;
-		grid-template-areas: "header" "main" "footer";
+}
+
+@media only screen and (max-width: 768px) {
+    .body {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "header" "main" "footer";
         font-size: 18px;
-        .main{
+        .main {
             text-align: -webkit-center;
         }
-	}
-    .contenedor li a{
+    }
+    .contenedor li a {
         font-size: 15px;
     }
-    .grid{
+    .grid {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(6, auto);
     }
-    .gridContainer{
+    .gridContainer {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(8, auto);
-        grid-template-areas:"img1" "img2" "img3" "img2x2" "novProm" "nota1" "nota2" "nota3";
+        grid-template-areas: "img1" "img2" "img3" "img2x2" "novProm" "nota1" "nota2" "nota3";
         text-align: -webkit-center;
     }
-    .row{
+    .row {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(6, auto);
-        grid-template-areas:"col" "col" "col" "col" "col" "col";
+        grid-template-areas: "col" "col" "col" "col" "col" "col";
         justify-content: center;
     }
-    .footer{
-        grid-template-columns:1fr;
+    .footer {
+        grid-template-columns: 1fr;
         grid-template-rows: repeat(4, auto);
         grid-template-areas: "contacto" "info1" "iconos" "copyright";
-        &__contacto{
+        &__contacto {
             font-size: 46px;
             justify-content: center;
         }
-        &__datos{
+        &__datos {
             text-align: center;
         }
     }
-    .ubicacion{
+    .ubicacion {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, auto);
         grid-template-areas: "h1" "iframe" "nota";
     }
-    .video{
+    .video {
         width: 80%;
     }
 }

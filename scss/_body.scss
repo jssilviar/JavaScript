@@ -1,145 +1,12 @@
-.body {
-    background-color: $bg-fondo;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "header header header" "main main main" "footer footer footer";
-    font-family: $fontMain;
-    &__header {
-        grid-area: header;
-    }
-    &__main {
-        grid-area: main;
-        padding-left: 3%;
-        padding-right: 3%;
-        margin: 2%;
-        display: grid;
-        &--carrito {
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto auto auto;
-            grid-template-areas: "carrito carrito resumen";
-        }
-    }
-    &__footer {
-        grid-area: footer;
-    }
-    &__h1 {
-        color: $fonts;
-        text-align: center;
-    }
-}
+/*clase utilizada en catering, cakes y backingPallet*/
 
-$fonts: ( small: 15px, medium: 18px, large: 19px, big: 22px, );
-@each $size,
-$value in $fonts {
-    .font--#{$size} {
-        font-size: $value;
-    }
-}
-
-.novProm {
-    grid-area: novProm;
-    color: $bg-info;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    .novProm-header {
-        text-align: center;
-    }
-    .blockquote-footer {
-        text-align: center;
-    }
+.name {
+    font-size: big;
+    font-weight: bold;
 }
 
 
-/*hoja de catering*/
-
-.gridCatering {
-    grid-template-areas: "catering" "catering" "catering" "catering" "catering" "catering";
-}
-
-.catering {
-    background-color: $bg-card;
-    text-align: center;
-    border: solid;
-    border-radius: 10px;
-    border-color: #6b6856;
-    .div--h2 {
-        color: $bg-info;
-        font-size: auto;
-    }
-    .div--h3,
-    p {
-        font-size: 21px;
-        color: $bg-info;
-        margin: 5px;
-    }
-}
-
-.rowList {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: "col col col" "col col col";
-}
-
-.card {
-    margin: 2vh;
-    border-radius: 5%;
-    .cantidad {
-        padding: 5px;
-        background-color: $bg-card;
-    }
-    .card-title {
-        text-align: center;
-    }
-    .card-body {
-        background-color: $bg-card;
-    }
-    .card-link {
-        font-size: 15px;
-        color: $bg-info;
-        padding: 5px 10px;
-        cursor: pointer;
-    }
-    .list-group-item {
-        text-align: center;
-        background-color: $bg-hf;
-    }
-}
-
-.precio {
-    text-align: center;
-    background-color: $bg-hf;
-}
-
-
-/*hoja de carrito de compras*/
-
-.gridCarro {
-    grid-area: carrito;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.resumen {
-    grid-area: resumen;
-}
-
-.cardCarrito {
-    width: 15rem;
-    text-align: center;
-}
-
-.hp-image {
-    width: 80px;
-    height: 120px;
-}
-
-
-/*hoja de inicio*/
+/*hoja de inicio-index*/
 
 .gridContainer {
     display: grid;
@@ -148,6 +15,7 @@ $value in $fonts {
     grid-template-areas: "img1 img2x2 img2x2 nota1" "img2 img2x2 img2x2 nota2" "img3 novProm novProm nota3";
     grid-gap: 10px;
     padding: 5px;
+    grid-area: body;
     &__protocol {
         grid-area: nota1;
         background-color: $bg-hf;
@@ -237,14 +105,153 @@ $value in $fonts {
     opacity: 1;
 }
 
+.novProm {
+    grid-area: novProm;
+    color: $bg-info;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    .novProm-header {
+        text-align: center;
+    }
+    .blockquote-footer {
+        text-align: center;
+    }
+}
+
+
+/*body del index */
+
+.body {
+    background-color: $bg-fondo;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, auto);
+    grid-template-areas: "img1 img2x2 img2x2 nota1" "img2 img2x2 img2x2 nota2" "img3 novProm novProm nota3" "col col col col" "col col col col" "col col col col" "col col col col" "catering catering catering catering" "catering catering catering catering" "h1 iframe iframe nota" "ubicacion ubicacion ubicacion ubicacion" "carrito carrito carrito resumen";
+    font-family: $fontMain;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin: 2%;
+    &--backingPallet {
+        grid-area: backingPallet;
+    }
+    &--cakes {
+        grid-area: cakes;
+    }
+    &--catering {
+        grid-area: catering;
+    }
+    &--contactanos {
+        grid-area: contactanos;
+    }
+    &--ubicacion {
+        grid-area: ubicacion;
+    }
+    &--carrito {
+        grid-area: carrito;
+    }
+    &__h1 {
+        color: $fonts;
+        text-align: center;
+    }
+}
+
+
+/* &__header {
+    grid-area: header;
+}
+&__footer {
+    grid-area: footer;
+} */
+
+
+/*hoja de catering*/
+
+.catering {
+    grid-area: catering;
+    text-align: center;
+    border-color: #6b6856;
+    .div--h2 {
+        color: $bg-info;
+        font-size: auto;
+    }
+    .div--h3,
+    p {
+        font-size: 21px;
+        color: $bg-info;
+        margin: 5px;
+    }
+}
+
+
+/*backingPAllet , cakes y catering*/
+
+.rowList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "col col col col" "col col col col";
+    grid-area: body;
+}
+
+.card {
+    .cantidad {
+        padding: 5px;
+        background-color: $bg-card;
+    }
+    .card-title {
+        text-align: center;
+    }
+    .card-body {
+        background-color: $bg-card;
+    }
+    .card-link {
+        font-size: 15px;
+        color: $bg-info;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    .list-group-item {
+        text-align: center;
+        background-color: $bg-hf;
+    }
+}
+
+.precio {
+    text-align: center;
+    background-color: $bg-hf;
+}
+
+
+/*hoja de carrito de compras*/
+
+.gridCarro {
+    grid-area: carrito;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.resumen {
+    grid-area: resumen;
+}
+
+.cardCarrito {
+    width: 15rem;
+    text-align: center;
+}
+
+.hp-image {
+    width: 80px;
+    height: 120px;
+}
+
 
 /*hoja ubicacion*/
 
 .ubicacion {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(1, auto);
-    grid-template-areas: "h1 iframe iframe iframe nota";
     margin: 2%;
     h1 {
         flex-grow: 1;
@@ -267,19 +274,4 @@ $value in $fonts {
             transition: transform 2s;
         }
     }
-}
-
-.videoDad {
-    text-align: center;
-    height: 50vh;
-}
-
-.video {
-    width: 40%;
-    height: 100%;
-}
-
-.name {
-    font-size: big;
-    font-weight: bold;
 }

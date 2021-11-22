@@ -3,129 +3,20 @@
   margin: 0%;
   padding: 0%; }
 
-.body {
-  background-color: #eee4b3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "header header header" "main main main" "footer footer footer";
-  font-family: "Josefin Sans", sans-serif; }
-  .body__header {
-    grid-area: header; }
-  .body__main {
-    grid-area: main;
-    padding-left: 3%;
-    padding-right: 3%;
-    margin: 2%;
-    display: grid; }
-    .body__main--carrito {
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto auto auto;
-      grid-template-areas: "carrito carrito resumen"; }
-  .body__footer {
-    grid-area: footer; }
-  .body__h1 {
-    color: #022525;
-    text-align: center; }
+/*clase utilizada en catering, cakes y backingPallet*/
+.name {
+  font-size: big;
+  font-weight: bold; }
 
-.font--small {
-  font-size: 15px; }
-
-.font--medium {
-  font-size: 18px; }
-
-.font--large {
-  font-size: 19px; }
-
-.font--big {
-  font-size: 22px; }
-
-.novProm {
-  grid-area: novProm;
-  color: #010e0e;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll; }
-  .novProm .novProm-header {
-    text-align: center; }
-  .novProm .blockquote-footer {
-    text-align: center; }
-
-/*hoja de catering*/
-.gridCatering {
-  grid-template-areas: "catering" "catering" "catering" "catering" "catering" "catering"; }
-
-.catering {
-  background-color: darkkhaki;
-  text-align: center;
-  border: solid;
-  border-radius: 10px;
-  border-color: #6b6856; }
-  .catering .div--h2 {
-    color: #010e0e;
-    font-size: auto; }
-  .catering .div--h3,
-  .catering p {
-    font-size: 21px;
-    color: #010e0e;
-    margin: 5px; }
-
-.rowList {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas: "col col col" "col col col"; }
-
-.card {
-  margin: 2vh;
-  border-radius: 5%; }
-  .card .cantidad {
-    padding: 5px;
-    background-color: darkkhaki; }
-  .card .card-title {
-    text-align: center; }
-  .card .card-body {
-    background-color: darkkhaki; }
-  .card .card-link {
-    font-size: 15px;
-    color: #010e0e;
-    padding: 5px 10px;
-    cursor: pointer; }
-  .card .list-group-item {
-    text-align: center;
-    background-color: #bdb76b; }
-
-.precio {
-  text-align: center;
-  background-color: #bdb76b; }
-
-/*hoja de carrito de compras*/
-.gridCarro {
-  grid-area: carrito;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; }
-
-.resumen {
-  grid-area: resumen; }
-
-.cardCarrito {
-  width: 15rem;
-  text-align: center; }
-
-.hp-image {
-  width: 80px;
-  height: 120px; }
-
-/*hoja de inicio*/
+/*hoja de inicio-index*/
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, auto);
   grid-template-areas: "img1 img2x2 img2x2 nota1" "img2 img2x2 img2x2 nota2" "img3 novProm novProm nota3";
   grid-gap: 10px;
-  padding: 5px; }
+  padding: 5px;
+  grid-area: body; }
   .gridContainer__protocol {
     grid-area: nota1;
     background-color: #bdb76b;
@@ -197,12 +88,118 @@
 .img-overlay:hover .overlay {
   opacity: 1; }
 
+.novProm {
+  grid-area: novProm;
+  color: #010e0e;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; }
+  .novProm .novProm-header {
+    text-align: center; }
+  .novProm .blockquote-footer {
+    text-align: center; }
+
+/*body del index */
+.body {
+  background-color: #eee4b3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(12, auto);
+  grid-template-areas: "img1 img2x2 img2x2 nota1" "img2 img2x2 img2x2 nota2" "img3 novProm novProm nota3" "col col col col" "col col col col" "col col col col" "col col col col" "catering catering catering catering" "catering catering catering catering" "h1 iframe iframe nota" "ubicacion ubicacion ubicacion ubicacion" "carrito carrito carrito resumen";
+  font-family: "Josefin Sans", sans-serif;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin: 2%; }
+  .body--backingPallet {
+    grid-area: backingPallet; }
+  .body--cakes {
+    grid-area: cakes; }
+  .body--catering {
+    grid-area: catering; }
+  .body--contactanos {
+    grid-area: contactanos; }
+  .body--ubicacion {
+    grid-area: ubicacion; }
+  .body--carrito {
+    grid-area: carrito; }
+  .body__h1 {
+    color: #022525;
+    text-align: center; }
+
+/* &__header {
+    grid-area: header;
+}
+&__footer {
+    grid-area: footer;
+} */
+/*hoja de catering*/
+.catering {
+  grid-area: catering;
+  text-align: center;
+  border-color: #6b6856; }
+  .catering .div--h2 {
+    color: #010e0e;
+    font-size: auto; }
+  .catering .div--h3,
+  .catering p {
+    font-size: 21px;
+    color: #010e0e;
+    margin: 5px; }
+
+/*backingPAllet , cakes y catering*/
+.rowList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "col col col col" "col col col col";
+  grid-area: body; }
+
+.card .cantidad {
+  padding: 5px;
+  background-color: darkkhaki; }
+
+.card .card-title {
+  text-align: center; }
+
+.card .card-body {
+  background-color: darkkhaki; }
+
+.card .card-link {
+  font-size: 15px;
+  color: #010e0e;
+  padding: 5px 10px;
+  cursor: pointer; }
+
+.card .list-group-item {
+  text-align: center;
+  background-color: #bdb76b; }
+
+.precio {
+  text-align: center;
+  background-color: #bdb76b; }
+
+/*hoja de carrito de compras*/
+.gridCarro {
+  grid-area: carrito;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; }
+
+.resumen {
+  grid-area: resumen; }
+
+.cardCarrito {
+  width: 15rem;
+  text-align: center; }
+
+.hp-image {
+  width: 80px;
+  height: 120px; }
+
 /*hoja ubicacion*/
 .ubicacion {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(1, auto);
-  grid-template-areas: "h1 iframe iframe iframe nota";
   margin: 2%; }
   .ubicacion h1 {
     flex-grow: 1;
@@ -221,18 +218,6 @@
     .ubicacion .notaUbicacion .nota:hover {
       transform: rotatey(-360deg);
       transition: transform 2s; }
-
-.videoDad {
-  text-align: center;
-  height: 50vh; }
-
-.video {
-  width: 40%;
-  height: 100%; }
-
-.name {
-  font-size: big;
-  font-weight: bold; }
 
 .header {
   width: 100%;
