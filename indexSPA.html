@@ -20,7 +20,7 @@
     <header class="sticky-top header">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand name" href="index.html">
+                <a class="navbar-brand name" href="indexSPA.html">
                     <img src="imagenes/logoCircular.png" alt="logoLadydiCakes" class="d-inline-block align-text-top header__img header__logo" /> Lady Di Cakes
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,27 +28,27 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item font--medium">
-                            <a class="nav-link name" aria-current="page" href="catering.html">Backing Pallet</a>
+                        <li class="nav-item font--medium js-scroll-trigger header__sombra" id="scroll">
+                            <a class="nav-link name" aria-current="page" href="#backingPallet">Backing Pallet</a>
                         </li>
-                        <li class="nav-item font--medium">
-                            <a class="nav-link name" href="cakes.html">Cakes</a>
+                        <li class="nav-item font--medium js-scroll-trigger header__sombra" id="scroll">
+                            <a class="nav-link name" href="#cakes">Cakes</a>
                         </li>
-                        <li class="nav-item font--medium">
-                            <a class="nav-link name" href="backingPallet.html">Catering</a>
+                        <li class="nav-item font--medium js-scroll-trigger header__sombra" id="scroll">
+                            <a class="nav-link name" href="#catering">Catering</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="contacto.html">
+                        <li class="nav-item js-scroll-trigger header__sombra" id="scroll">
+                            <a class="nav-link" aria-current="page" href="#contactanos">
                                 <img src="imagenes/iconoContacto.svg" class="header__img" alt="contacto" title="Contacto">
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="ubicacion.html">
+                        <li class="nav-item js-scroll-trigger header__sombra" id="scroll">
+                            <a class="nav-link" href="#ubicanos">
                                 <img src="imagenes/iconoUbicacion.svg" alt="ubicación" class="header__img" title="Ubícanos">
                             </a>
                         </li>
-                        <li class="nav-item header__sombra">
-                            <a id="listaCarrito" class="nav-link" href="carritoDeCompras.html">
+                        <li class="nav-item js-scroll-trigger header__sombra" id="scroll">
+                            <a id="listaCarrito" class="nav-link" href="#carritoDeCompras">
                                 <img src="imagenes/iconoCarroDeCompras.svg" alt="carritoDeCompras" class="header__img" title="ver mi carrito">
                             </a>
                         </li>
@@ -61,7 +61,7 @@
         <div class="body">
             <div class="gridContainer" class="collapse navbar-collapse">
                 <div class="indexBacking">
-                    <a href="./backingPallet.html">
+                    <a href="#backingPallet">
                         <div class="img-overlay">
                             <img class="img" src="imagenes/palletBlanco.png" alt="palletBlanco">
                             <div class="overlay">Backing Pallet</div>
@@ -69,7 +69,7 @@
                     </a>
                 </div>
                 <div class="indexCakes">
-                    <a href="cakes.html">
+                    <a href="#cakes">
                         <div class="img-overlay">
                             <img class="img" src="imagenes/tortaBabyShower.png" alt="torta" />
                             <div class="overlay">Cakes</div>
@@ -77,7 +77,7 @@
                     </a>
                 </div>
                 <div class="indexCatering">
-                    <a href="catering.html">
+                    <a href="#catering">
                         <div class="img-overlay">
                             <img class="img" src="imagenes/manzanas.png" alt="manzanasForradas" />
                             <div class="overlay">Catering</div>
@@ -163,8 +163,8 @@
                 </div>
             </div>
         </div>
-        <div class="body backingPallet">
-            <div class="justify-content-md-center">
+        <div class="body backingPallet" id="backingPallet">
+            <div class="justify-content-md-center ">
                 <div class="container">
                     <div class="row row-cols-2 row-cols-lg-3 rowList">
                         <div class="col">
@@ -178,8 +178,8 @@
                                     <li class="list-group-item font--medium">Desde S/220.00</li>
                                 </ul>
                                 <div class="card-body cantidad font--small">
-                                    <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                    <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                    <button>Añadir al Carrito</button>
+                                    <a href="#carritoDeCompras" class="card-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -194,8 +194,8 @@
                                     <li class="list-group-item font--medium">Desde S/250.00</li>
                                 </ul>
                                 <div class="card-body cantidad font--small">
-                                    <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                    <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                    <button>Añadir al Carrito</button>
+                                    <a href="#carritoDeCompras" class="card-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -210,8 +210,8 @@
                                     <li class="list-group-item font--medium">Desde S/150.00</li>
                                 </ul>
                                 <div class="card-body cantidad font--small">
-                                    <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                    <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                    <button>Añadir al Carrito</button>
+                                    <a href="#carritoDeCompras" class="card-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -226,8 +226,8 @@
                                     <li class="list-group-item font--medium">Desde S/200.00</li>
                                 </ul>
                                 <div class="card-body cantidad font--small">
-                                    <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                    <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                    <button>Añadir al Carrito</button>
+                                    <a href="#carritoDeCompras" class="card-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -242,8 +242,8 @@
                                     <li class="list-group-item font--medium">Desde S/100.00</li>
                                 </ul>
                                 <div class="card-body cantidad font--small">
-                                    <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                    <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                    <button>Añadir al Carrito</button>
+                                    <a href="#carritoDeCompras" class="card-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -258,8 +258,8 @@
                                     <li class="list-group-item font--medium">Desde S/230.00</li>
                                 </ul>
                                 <div class="card-body cantidad font--small">
-                                    <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                    <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                    <button>Añadir al Carrito</button>
+                                    <a href="#carritoDeCompras" class="card-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -267,7 +267,7 @@
                 </div>
             </div>
         </div>
-        <div class="body cakes">
+        <div class="body cakes" id="cakes">
             <div class="container-fluid">
                 <div class="container">
                     <div class="row row-cols-2 row-cols-lg-3 rowList">
@@ -282,8 +282,8 @@
                                     <li class="list-group-item precio font--medium">Desde S/250.00</li>
                                 </ul>
                                 <div class="card-body cantidad font--small">
-                                    <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                    <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                    <button>Añadir al Carrito</button>
+                                    <a href="#carritoDeCompras" class="card-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -291,15 +291,15 @@
                             <div class="card" style="width: 18rem;">
                                 <img src="imagenes/tortaOlaf.png" class="card-img-top" alt="tortaOlaf">
                                 <div class="card-body">
-                                    <h5 class="card-title font--big">Cumpleaños</h5>
+                                    <h5 class="card-title font--big">Cumpleaños infantiles</h5>
                                     <p class="card-text font--large">Keke de vainilla, chocolate o chocochip, de medidas #18, #20, #24, #26, forrado con fontdant, chantilly o masa elástica.Decorado a gusto</p>
                                 </div>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item font--medium">Desde S/250.00</li>
                                 </ul>
                                 <div class="card-body cantidad font--small">
-                                    <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                    <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                    <button>Añadir al Carrito</button>
+                                    <a href="#carritoDeCompras" class="card-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -311,11 +311,11 @@
                                     <p class="card-text font--large">Keke de vainilla, chocolate o chocochip, de medidas #18, #20, #24, #26, forrado con fontdant, chantilly o masa elástica.Decorado a gusto.</p>
                                 </div>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item font--medium">Desde S/250.00</li>
+                                    <li class="list-group-item font--medium">Desde S/180.00</li>
                                 </ul>
                                 <div class="card-body cantidad font--small">
-                                    <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                    <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                    <button>Añadir al Carrito</button>
+                                    <a href="#carritoDeCompras" class="card-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -327,11 +327,11 @@
                                     <p class="card-text font--large">Keke de vainilla, chocolate o chocochip, de medidas #18, #20, #24, #26, forrado con fontdant, chantilly o masa elástica.Decorado a gusto.</p>
                                 </div>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item font--medium">Desde S/250.00</li>
+                                    <li class="list-group-item font--medium">Desde S/230.00</li>
                                 </ul>
                                 <div class="card-body cantidad font--small">
-                                    <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                    <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                    <button>Añadir al Carrito</button>
+                                    <a href="#carritoDeCompras" class="card-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -340,14 +340,14 @@
                                 <img src="imagenes/tortaMatrimonio.png" class="card-img-top" alt="tortaMatrimonio">
                                 <div class="card-body">
                                     <h5 class="card-title font--big">Matrimonio</h5>
-                                    <p class="card-text font--large">Keke de vainilla, chocolate o chocochip, de medidas #18, #20, #24, #26, forrado con fontdant, chantilly o masa elástica.Decorado a gusto.</p>
+                                    <p class="card-text font--large">Keke de vainilla, chocolate o chocochip, o especial de medidas #18, #20, #24, #26, #30 forrado con fontdant, chantilly o masa elástica.Decorado al gusto.</p>
                                 </div>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item font--medium">Desde S/250.00</li>
+                                    <li class="list-group-item font--medium">Desde S/350.00</li>
                                 </ul>
                                 <div class="card-body cantidad font--small">
-                                    <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                    <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                    <button>Añadir al Carrito</button>
+                                    <a href="#carritoDeCompras" class="card-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -359,11 +359,11 @@
                                     <p class="card-text font--large">Keke de vainilla, chocolate o chocochip, de medidas #18, #20, #24, #26, forrado con fontdant, chantilly o masa elástica.Decorado a gusto.</p>
                                 </div>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item font--medium">Desde S/250.00</li>
+                                    <li class="list-group-item font--medium">Desde S/210.00</li>
                                 </ul>
                                 <div class="card-body cantidad font--small">
-                                    <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                    <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                    <button>Añadir al Carrito</button>
+                                    <a href="#carritoDeCompras" class="card-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -371,7 +371,7 @@
                 </div>
             </div>
         </div>
-        <div class="body catering">
+        <div class="body catering" id="catering">
             <div class="container-fluid">
                 <div class="justify-content-md-center">
                     <div class="container">
@@ -381,30 +381,30 @@
                                     <img src="imagenes/manzanas.png" class="card-img-top" alt="manzanas">
                                     <div class="card-body">
                                         <h5 class="card-title font--big">Chocomanzanas</h5>
-                                        <p class="card-text font--large">Paquete x6 unidades, personalizados.</p>
+                                        <p class="card-text font--large">Paquete x6 unidades,bañadas en caramelo, chocolate o forradas con fontdant personalizados.</p>
                                     </div>
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item font--medium">Desde S/30.00</li>
                                     </ul>
                                     <div class="card-body cantidad font--small">
-                                        <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                        <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                        <button>Añadir al Carrito</button>
+                                        <a href="#carritoDeCompras" class="card-link"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="card" style="width: 18rem;">
-                                    <img src="imagenes/Alfajores.png" class="card-img-top" alt="alfajores">
+                                    <img src="imagenes/alfajores.png" class="card-img-top" alt="alfajores">
                                     <div class="card-body">
                                         <h5 class="card-title font--big">Alfajores</h5>
-                                        <p class="card-text font--large">Paquete x6 unidades, relleno de manjar blanco y cubierto por masa elástica</p>
+                                        <p class="card-text font--large">Paquete x6 unidades, relleno de manjar blanco y cubierto por masa elástica o azúcar impalpable.</p>
                                     </div>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item font--medium">Desde S/250.00</li>
+                                        <li class="list-group-item font--medium">Desde S/45.00</li>
                                     </ul>
                                     <div class="card-body cantidad font--small">
-                                        <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                        <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                        <button>Añadir al Carrito</button>
+                                        <a href="#carritoDeCompras" class="card-link"></a>
                                     </div>
                                 </div>
                             </div>
@@ -413,14 +413,14 @@
                                     <img src="imagenes/cupcakeElefante.png" class="card-img-top" alt="cupcakeElefante">
                                     <div class="card-body">
                                         <h5 class="card-title font--big">Cup Cakes</h5>
-                                        <p class="card-text font--large">Paquete desde 6 unidades, masa de vainilla, chocolate o chocochip. personalizados.</p>
+                                        <p class="card-text font--large">Paquete desde 6 unidades, masa de vainilla, chocolate o chocochip. Personalizados.</p>
                                     </div>
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item font--medium">Desde S/60.00</li>
                                     </ul>
                                     <div class="card-body cantidad font--small">
-                                        <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                        <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                        <button>Añadir al Carrito</button>
+                                        <a href="#carritoDeCompras" class="card-link"></a>
                                     </div>
                                 </div>
                             </div>
@@ -429,14 +429,14 @@
                                     <img src="imagenes/galletas.png" class="card-img-top" alt="backing1">
                                     <div class="card-body">
                                         <h5 class="card-title font--big">Galletas Personalizadas</h5>
-                                        <p class="card-text font--large">Paquete x6 unidades,vainilla, chocolate o chocochip, forrados con masa elástica o manjar.</p>
+                                        <p class="card-text font--large">Paquete x6 unidades,vainilla, chocolate o chocochip, de la forma que quieras y adornados con masa elástica o manjar.</p>
                                     </div>
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item font--medium">Desde S/30.00</li>
                                     </ul>
                                     <div class="card-body cantidad font--small">
-                                        <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                        <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                        <button>Añadir al Carrito</button>
+                                        <a href="#carritoDeCompras" class="card-link"></a>
                                     </div>
                                 </div>
                             </div>
@@ -451,8 +451,8 @@
                                         <li class="list-group-item font--medium">Desde S/25.00</li>
                                     </ul>
                                     <div class="card-body cantidad font--small">
-                                        <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                        <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                        <button>Añadir al Carrito</button>
+                                        <a href="#carritoDeCompras" class="card-link"></a>
                                     </div>
                                 </div>
                             </div>
@@ -467,8 +467,8 @@
                                         <li class="list-group-item font--medium">Desde S/30.00</li>
                                     </ul>
                                     <div class="card-body cantidad font--small">
-                                        <input type="number" name="" id="" min="1" max="10" placeholder="1">
-                                        <a href="carritoDeCompras.html" class="card-link">Añadir al carrito</a>
+                                        <button>Añadir al Carrito</button>
+                                        <a href="#carritoDeCompras" class="card-link"></a>
                                     </div>
                                 </div>
                             </div>
@@ -477,7 +477,7 @@
                 </div>
             </div>
         </div>
-        <div class="body contactanos">
+        <div class="body contactanos" id="contactanos">
             <div class="justify-content-md-center container">
                 <h1 class="name">Contáctanos:</h1>
                 <form class="row g-3" action="envío.php" method="POST">
@@ -544,31 +544,25 @@
                 </form>
             </div>
         </div>
-        <div class="body ubicacion">
+        <div class="body ubicacion" id="ubicanos">
             <div>
                 <h1 class="name">Mapa de ubicación</h1>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.908221915559!2d-76.93577458561687!3d-12.118431846536257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7ad86a6f687%3A0x3dc45b82105c1e4e!2sLady%20Di%20Cakes!5e0!3m2!1ses-419!2spe!4v1627129274119!5m2!1ses-419!2spe" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <div class="notaUbicacion gridContainer__nota muffin">
-                    <h2 class="name">Delivery gratis desde:</h2>
-                    <ul>
-                        <li class="font--large">Consumos por monto S/399.00</li>
-                    </ul>
-                </div>
             </div>
         </div>
-        <div class="body carrito">
+        <div class="body carrito" id="carritoDeCompras">
             <div id="gridCarro" class="gridCarro">
-            </div>
-            <div class="resumen">
-                <h3>Resumen de la compra</h3>
-                <div id="detalle">
-                    <p>Cantidad de productos: <span id="cantidadProductos">0</span></p>
-                    <p>Total S/ <span id="totalCompra">0.00</span></p>
-                    <button class="btn btn-warning" id="mostrarOcultar">Ocultar</button>
+                <div class="resumen">
+                    <h3>Resumen de la compra</h3>
+                    <div id="detalle">
+                        <p>Cantidad de productos: <span id="cantidadProductos">0</span></p>
+                        <p>Total S/ <span id="totalCompra">0.00</span></p>
+                        <button class="btn btn-warning" id="mostrarOcultar">Ocultar</button>
                         <div id="detalleProductos"></div>
                         <div id="vaciarCarrito"></div>
                     </div>
             </div>
+        </div>
         </div>
     </main>
     <footer class="footer">
@@ -604,7 +598,7 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Mi script -->
     <script src="productos.js"></script>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

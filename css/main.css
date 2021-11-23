@@ -99,19 +99,14 @@
   .novProm .blockquote-footer {
     text-align: center; }
 
-/*body del index */
+/*body del index*/
 .body {
-  background-color: #eee4b3;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(12, auto);
-  grid-template-areas: "img1 img2x2 img2x2 nota1" "img2 img2x2 img2x2 nota2" "img3 novProm novProm nota3" "col col col col" "col col col col" "col col col col" "col col col col" "catering catering catering catering" "catering catering catering catering" "h1 iframe iframe nota" "ubicacion ubicacion ubicacion ubicacion" "carrito carrito carrito resumen";
+  background-color: #eee4b3;
   font-family: "Josefin Sans", sans-serif;
   padding-left: 3%;
   padding-right: 3%;
   margin: 2%; }
-  .body--backingPallet {
-    grid-area: backingPallet; }
   .body--cakes {
     grid-area: cakes; }
   .body--catering {
@@ -126,33 +121,29 @@
     color: #022525;
     text-align: center; }
 
-/* &__header {
-    grid-area: header;
-}
-&__footer {
-    grid-area: footer;
-} */
 /*hoja de catering*/
-.catering {
-  grid-area: catering;
-  text-align: center;
-  border-color: #6b6856; }
-  .catering .div--h2 {
-    color: #010e0e;
-    font-size: auto; }
-  .catering .div--h3,
-  .catering p {
-    font-size: 21px;
-    color: #010e0e;
-    margin: 5px; }
-
-/*backingPAllet , cakes y catering*/
-.rowList {
+/* .catering {
+    text-align: center;
+    border-color: #6b6856;
+    .div--h2 {
+        color: $bg-info;
+        font-size: auto;
+    }
+    .div--h3,
+    p {
+        font-size: 21px;
+        color: $bg-info;
+        margin: 5px;
+    }
+} */
+.cakes .catering .backingPallet {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto);
   grid-template-areas: "col col col col" "col col col col";
-  grid-area: body; }
+  grid-area: body;
+  grid-gap: 10px;
+  padding: 5px; }
 
 .card .cantidad {
   padding: 5px;
@@ -162,7 +153,8 @@
   text-align: center; }
 
 .card .card-body {
-  background-color: darkkhaki; }
+  background-color: darkkhaki;
+  text-align: center; }
 
 .card .card-link {
   font-size: 15px;
@@ -224,8 +216,10 @@
   background-color: #bdb76b; }
   .header__img {
     width: 28px; }
-  .header__sombra {
-    background-color: #010e0e; }
+  .header__sombra:active {
+    background-color: #ffc107;
+    border-radius: 5px;
+    animation-duration: 10s; }
   .header .contacto-icon {
     background-image: url(../img/contacto.svg);
     width: 28px; }

@@ -1,32 +1,35 @@
 .header {
     width: 100%;
     background-color: $bg-hf;
-
-    &__img{
+    &__img {
         width: 28px;
     }
-    &__sombra{
-        background-color: $bg-info;
+    &__sombra:active {
+        background-color: $sombra;
+        border-radius: 5px;
+        animation-duration: 10s;
     }
-    @each $svg in contacto, ubicacion, carritoDeCompras{
-        .#{$svg}-icon{
+    @each $svg in contacto,
+    ubicacion,
+    carritoDeCompras {
+        .#{$svg}-icon {
             background-image:url(../img/#{$svg}.svg);
             width: 28px;
         }
     }
-    &__logo:hover{
+    &__logo:hover {
         transform: scalex(1.2);
         cursor: pointer;
         transition: transform 1s;
     }
-    &__grid{
-        $d:grid;
-        grid-template-columns:repeat(3, 1fr);
+    &__grid {
+        $d: grid;
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 650px);
         grid-gap: 10px;
         padding: 5px;
     }
-    .name{
+    .name {
         font-size: big;
         font-weight: bold;
     }

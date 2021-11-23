@@ -120,21 +120,15 @@
 }
 
 
-/*body del index */
+/*body del index*/
 
 .body {
-    background-color: $bg-fondo;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, auto);
-    grid-template-areas: "img1 img2x2 img2x2 nota1" "img2 img2x2 img2x2 nota2" "img3 novProm novProm nota3" "col col col col" "col col col col" "col col col col" "col col col col" "catering catering catering catering" "catering catering catering catering" "h1 iframe iframe nota" "ubicacion ubicacion ubicacion ubicacion" "carrito carrito carrito resumen";
+    background-color: $bg-fondo;
     font-family: $fontMain;
     padding-left: 3%;
     padding-right: 3%;
     margin: 2%;
-    &--backingPallet {
-        grid-area: backingPallet;
-    }
     &--cakes {
         grid-area: cakes;
     }
@@ -157,18 +151,10 @@
 }
 
 
-/* &__header {
-    grid-area: header;
-}
-&__footer {
-    grid-area: footer;
-} */
-
-
 /*hoja de catering*/
 
-.catering {
-    grid-area: catering;
+
+/* .catering {
     text-align: center;
     border-color: #6b6856;
     .div--h2 {
@@ -181,17 +167,16 @@
         color: $bg-info;
         margin: 5px;
     }
-}
+} */
 
-
-/*backingPAllet , cakes y catering*/
-
-.rowList {
+.cakes .catering .backingPallet {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
     grid-template-areas: "col col col col" "col col col col";
     grid-area: body;
+    grid-gap: 10px;
+    padding: 5px;
 }
 
 .card {
@@ -204,6 +189,7 @@
     }
     .card-body {
         background-color: $bg-card;
+        text-align: center;
     }
     .card-link {
         font-size: 15px;
