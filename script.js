@@ -1,3 +1,54 @@
+//cambiando de color en la nav
+const backingPallet = document.querySelector('#backingPallet');
+const cakes = document.querySelector('#cakes');
+const catering = document.querySelector('#catering');
+const contactanos = document.querySelector('#contactanos');
+const ubicanos = document.querySelector('#ubicanos');
+const carritoDeCompras = document.querySelector('#carritoDeCompras');
+
+const itemBackingPallet = document.querySelector('#li-backingPallet');
+const itemCakes = document.querySelector('#li-cakes');
+const itemCatering = document.querySelector('#li-catering');
+const itemContactanos = document.querySelector('#li-contactanos');
+const itemUbicanos = document.querySelector('#li-ubicanos');
+const itemCarritoDeCompras = document.querySelector('#li-carritoDeCompras');
+
+const ob1 = new IntersectionObserver(callback);
+
+function callback(entries, observador) {
+    if (entries[0].isIntersecting) {
+        itemBackingPallet.classList.add('header__sombra');
+    } else {
+        itemBackingPallet.classList.remove('header__sombra');
+    }
+}
+
+ob1.observe(backingPallet);
+
+const ob2 = new IntersectionObserver(callback2);
+const ob3 = new IntersectionObserver(callback3);
+
+ob2.observe(cakes);
+ob3.observe(catering);
+
+function callback2(entries, observador) {
+    if (entries[0].isIntersecting) {
+        itemBackingPallet.classList.remove('header__sombra');
+        itemCakes.classList.add('header__sombra');
+    } else {
+        itemCakes.classList.remove('header__sombra');
+    }
+}
+
+function callback3(entries, observador) {
+    if (entries[0].isIntersecting) {
+        itemCakes.classList.remove('header__sombra');
+        itemCatering.classList.add('header__sombra');
+    } else {
+        itemCatering.classList.remove('header__sombra');
+    }
+}
+
 if (localStorage.getItem("carrito")) {
     localStorage.removeItem("carrito");
 }

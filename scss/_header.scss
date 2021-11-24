@@ -4,10 +4,9 @@
     &__img {
         width: 28px;
     }
-    &__sombra:active {
+    &__sombra {
         background-color: $sombra;
         border-radius: 5px;
-        animation-duration: 10s;
     }
     @each $svg in contacto,
     ubicacion,
