@@ -8,6 +8,9 @@
   font-size: big;
   font-weight: bold; }
 
+.seccion {
+  font-size: 30px; }
+
 /*hoja de inicio-index*/
 .gridContainer {
   display: grid;
