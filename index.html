@@ -20,7 +20,7 @@
     <header class="sticky-top header">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand name" href="indexSPA.html">
+                <a class="navbar-brand name" href="index.html">
                     <img src="imagenes/logoCircular.png" alt="logoLadydiCakes" class="d-inline-block align-text-top header__img header__logo" /> Lady Di Cakes
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -482,64 +482,53 @@
                 <h1 class="name">Contáctanos:</h1>
                 <form class="row g-3" action="envío.php" method="POST">
                     <div class="col-md-6">
-                        <label for="inputEmail4" class="form-label">Nombres</label>
-                        <input type="email" class="form-control" id="inputEmail4">
+                        <label for="Nombre" class="form-label">Nombres</label>
+                        <input type="text" class="form-control" id="Nombre">
                     </div>
                     <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Apellidos</label>
-                        <input type="password" class="form-control" id="inputPassword4">
+                        <label for="Apellidos" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="Apellidos" name="Apellidos">
                     </div>
                     <div class="col-md-10">
                         <label for="inputCity" class="form-label" input type="text" name="" id="">Dirección</label>
-                        <input type="text" class="form-control" id="inputCity">
+                        <input type="text" class="form-control" id="inputCity" name="inputCity">
                     </div>
                     <div class="col-md-2">
                         <label for="inputState" class="form-label">Distrito</label>
-                        <input type="text" class="form-control" id="inputCity">
+                        <input type="text" class="form-control" id="inputState" name="inputState">
                     </div>
-                    <div class="col-12">
+                    <div class="col-md-6">
                         <label for="inputAddress2" class="form-label">Referencia</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, casa, o piso">
+                        <input type="text" class="form-control" id="inputAddress2" name="inputAddress2" placeholder="Apartamento, casa, o piso">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="E-mail" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="E-mail" name="E-mail" placeholder="miemail@gmail">
                     </div>
                     <div class="col-md-6">
                         <label for="inputCity" class="form-label" input type="text" name="" id="">Déjanos un mensaje</label>
-                        <input type="text" class="form-control" id="inputCity">
+                        <textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="5" placeholder="Hola, quisiera cotizar un modelo..."></textarea>
                     </div>
                     <div class="col-md-4">
-                        <label for="inputState" class="form-label">Género</label>
-                        <select id="inputState" class="form-select">
-                        <option selected>Seleccionar...</option>
-                        <option>Hombre</option>
-                        <option>Mujer</option>
-                        <option>Ninguno</option>
-                    </select>
+                        <label for="calendario" class="form-label">Dinos la fecha y hora que deseas recibir tu pedido:</label>
+                        <input type="datetime-local" class="form-control" name="calendario" id="calendario">
+                        </select>
                     </div>
                     <div class="col-md-2">
                         <label for="inputZip" class="form-label">Celular</label>
-                        <input type="text" class="form-control" id="inputZip" input type="tel" id="tel" name="tel" placeholder="123456789" maxlength="9">
+                        <input type="text" class="form-control" id="inputZip" name="inputZip" input type="tel" id="tel" name="tel" placeholder="123456789" maxlength="9">
                     </div>
                     <div class="col-12">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck">
                             <label class="form-check-label" for="gridCheck">
                         Recordarme
                         </label>
                         </div>
                     </div>
-                    <div>
-                        Quiero recibir ofertas por correo
-                        <label for="">Sí</label>
-                        <input type="radio" value="si" name="acepta">
-                        <label for="">No</label>
-                        <input type="radio" value="no" name="acepta">
-                        <br> Acepto términos y condiciones
-                        <label>
-                        <input type="checkbox" name="" id="">
-                        </label>
-                    </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-warning">Enviar</button>
-                        <button type="submit" class="btn btn-warning">Cancelar<button>
+                        <button type="submit" class="btn btn-warning" id="btnEnviar">Enviar</button>
+                        <button type="reset" class="btn btn-warning">Cancelar<button>
                     </div>
                 </form>
             </div>
