@@ -236,13 +236,11 @@ let enviar = document.getElementById("btnEnviar").onclick = () => {
 
 //sombreado de secciones
 const secciones = document.querySelectorAll('.seccion');
-const menuItems = document.querySelectorAll('.menu-item');
+const menuItems = document.querySelectorAll('.menu_item');
 
 const funcionObserver = entries => {
     entries.forEach(entry => {
-        console.log(entry)
         if (entry.isIntersecting) {
-            console.log(entry, "Está intersectando")
             const itemActual = Array.from(menuItems).find(item => item.dataset.url === entry.target.id)
             itemActual.classList.add('active')
             for (const item of menuItems) {
@@ -251,7 +249,7 @@ const funcionObserver = entries => {
                 }
             }
         }
-    });
+    })
 }
 
 const observer = new IntersectionObserver(funcionObserver, {

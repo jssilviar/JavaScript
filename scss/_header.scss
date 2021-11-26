@@ -4,10 +4,6 @@
     &__img {
         width: 28px;
     }
-    &__sombra {
-        background-color: $sombra;
-        border-radius: 5px;
-    }
     @each $svg in contacto,
     ubicacion,
     carritoDeCompras {
@@ -31,5 +27,9 @@
     .name {
         font-size: big;
         font-weight: bold;
+    }
+    li.active {
+        background-color: red;
+        border-radius: 5px;
     }
 }

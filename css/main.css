@@ -9,7 +9,7 @@
   font-weight: bold; }
 
 .seccion {
-  font-size: 30px; }
+  font-size: 18px; }
 
 /*hoja de inicio-index*/
 .gridContainer {
@@ -204,9 +204,6 @@
   background-color: #bdb76b; }
   .header__img {
     width: 28px; }
-  .header__sombra {
-    background-color: #ffc107;
-    border-radius: 5px; }
   .header .contacto-icon {
     background-image: url(../img/contacto.svg);
     width: 28px; }
@@ -228,6 +225,9 @@
   .header .name {
     font-size: big;
     font-weight: bold; }
+  .header li.active {
+    background-color: red;
+    border-radius: 5px; }
 
 .footer {
   background-color: #bdb76b;
