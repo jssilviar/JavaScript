@@ -254,7 +254,7 @@ const funcionObserver = entries => {
 
 const observer = new IntersectionObserver(funcionObserver, {
     root: null,
-    rootMargin: '0px',
+    rootMargin: '0%',
     threshold: 0.8
 })
 

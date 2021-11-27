@@ -9,7 +9,10 @@
   font-weight: bold; }
 
 .seccion {
-  font-size: 18px; }
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1em; }
 
 /*hoja de inicio-index*/
 .gridContainer {
@@ -107,9 +110,7 @@
   display: grid;
   background-color: #eee4b3;
   font-family: "Josefin Sans", sans-serif;
-  padding-left: 3%;
-  padding-right: 3%;
-  margin: 2%; }
+  margin: 2vh; }
   .body--cakes {
     grid-area: cakes; }
   .body--catering {
@@ -147,7 +148,7 @@
 .card .card-link {
   font-size: 15px;
   color: #010e0e;
-  padding: 5px 10px;
+  padding: 5px 5px;
   cursor: pointer; }
 
 .card .list-group-item {
@@ -225,8 +226,19 @@
   .header .name {
     font-size: big;
     font-weight: bold; }
-  .header li.active {
-    background-color: red;
+  .header .menu_items {
+    display: flex;
+    list-style: none;
+    margin-right: 30px; }
+  .header .menu_items li {
+    margin: 0 5px; }
+  .header .menu_items li a {
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block; }
+  .header .menu_items li.active {
+    background-color: #ffc107;
     border-radius: 5px; }
 
 .footer {
