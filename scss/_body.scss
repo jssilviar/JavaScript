@@ -1,3 +1,68 @@
+//body del index
+.body {
+    background-color: $bg-fondo;
+    font-family: $fontMain;
+    padding: 1%;
+}
+
+//grid de la seccion inicio
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "protocol img2x2 img2x2 novProm" "pagaCon img2x2 img2x2 notaDscto";
+    grid-gap: 10px;
+    &__protocol {
+        grid-area: protocol;
+        background-color: $bg-hf;
+        font-size: $textAlmostMedium;
+        border-radius: 20px;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10px 0 10px;
+        ul {
+            padding-left: 0;
+        }
+    }
+    &__novProm {
+        grid-area: novProm;
+        color: $bg-titulo;
+        font-size: $textSmall;
+        text-align: center;
+    }
+    &__pagaCon {
+        grid-area: pagaCon;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    &__nota {
+        grid-area: notaDscto;
+        background-color: $bg-hf;
+        border-radius: 10%;
+        color: $bg-titulo;
+        padding: 20px 5px 0px 10px;
+        font-size: $textMedium;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:hover {
+            transform: rotatey(-360deg);
+            transition: transform 2s;
+        }
+    }
+}
+
+.titulos {
+    font-weight: bold;
+    text-align: center;
+    color: $bg-titulo;
+}
+
+
 /*clase utilizada en catering, cakes y backingPallet*/
 
 .name {
@@ -7,56 +72,12 @@
 
 //desde aqui todo lo que va en seccion es del ejemplo
 .seccion {
-    height: 100vh;
     align-items: center;
     justify-content: space-between;
-    font-size: 1em;
 }
 
 
 /*hoja de inicio-index*/
-
-.gridContainer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: "img1 img2x2 img2x2 nota1" "img2 img2x2 img2x2 nota2" "img3 novProm novProm nota3";
-    grid-gap: 10px;
-    padding: 5px;
-    grid-area: body;
-    &__protocol {
-        grid-area: nota1;
-        background-color: $bg-hf;
-        border-radius: 20px;
-        padding: 5px 10px 5px 10px;
-        text-align: left;
-        justify-content: center;
-        h2 {
-            text-align: center;
-            color: $bg-info;
-        }
-    }
-    &__pagaCon {
-        grid-area: nota2;
-        h2 {
-            text-align: center;
-            color: $bg-info;
-        }
-    }
-    &__nota {
-        grid-area: nota3;
-        background-color: $bg-hf;
-        list-style: none;
-        text-align: start;
-        border-radius: 10%;
-        color: $bg-info;
-        padding: 60px 5px 40px 10px;
-        &:hover {
-            transform: rotatey(-360deg);
-            transition: transform 2s;
-        }
-    }
-}
 
 .muffin {
     list-style: square inside url(../imagenes/muffin.svg);
@@ -69,18 +90,6 @@
     height: auto;
 }
 
-.indexBacking {
-    grid-area: img1;
-}
-
-.indexCakes {
-    grid-area: img2;
-}
-
-.indexCatering {
-    grid-area: img3;
-}
-
 .slider {
     grid-area: img2x2;
     .img {
@@ -89,81 +98,6 @@
     .h2 {
         display: block;
     }
-}
-
-.img-overlay {
-    position: relative;
-    max-width: 300px;
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    background: $overlay;
-    width: 100%;
-    transition: .5s ease;
-    opacity: 0;
-    color: $bg-info;
-    font-size: $textMedium;
-    padding: 30px;
-    text-align: center;
-}
-
-.img-overlay:hover .overlay {
-    opacity: 1;
-}
-
-.novProm {
-    grid-area: novProm;
-    color: $bg-info;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    .novProm-header {
-        text-align: center;
-    }
-    .blockquote-footer {
-        text-align: center;
-    }
-}
-
-
-/*body del index*/
-
-.body {
-    display: grid;
-    background-color: $bg-fondo;
-    font-family: $fontMain;
-    margin: 2vh;
-    &--cakes {
-        grid-area: cakes;
-    }
-    &--catering {
-        grid-area: catering;
-    }
-    &--contactanos {
-        grid-area: contactanos;
-    }
-    &--ubicacion {
-        grid-area: ubicacion;
-    }
-    &--carrito {
-        grid-area: carrito;
-    }
-    &__h1 {
-        color: $fonts;
-        text-align: center;
-    }
-}
-
-.cakes .catering .backingPallet {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: "col col col col" "col col col col";
-    grid-area: body;
-    grid-gap: 10px;
-    padding: 5px;
 }
 
 .card {
@@ -180,7 +114,7 @@
     }
     .card-link {
         font-size: 15px;
-        color: $bg-info;
+        color: $bg-titulo;
         padding: 5px 5px;
         cursor: pointer;
     }
@@ -240,7 +174,7 @@
         background-color: $bg-hf;
         text-align: start;
         border-radius: 10%;
-        color: $bg-info;
+        color: $bg-titulo;
         padding: 60px 5px 40px 5px;
         .nota:hover {
             transform: rotatey(-360deg);

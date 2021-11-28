@@ -1,7 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap");
 * {
-  margin: 0%;
-  padding: 0%; }
+  margin: 0;
+  padding: 0; }
+
+.body {
+  background-color: #eee4b3;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 1%; }
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "protocol img2x2 img2x2 novProm" "pagaCon img2x2 img2x2 notaDscto";
+  grid-gap: 10px; }
+  .gridContainer__protocol {
+    grid-area: protocol;
+    background-color: #bdb76b;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px 0 10px; }
+    .gridContainer__protocol ul {
+      padding-left: 0; }
+  .gridContainer__novProm {
+    grid-area: novProm;
+    color: #010e0e;
+    font-size: 1rem;
+    text-align: center; }
+  .gridContainer__pagaCon {
+    grid-area: pagaCon;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; }
+  .gridContainer__nota {
+    grid-area: notaDscto;
+    background-color: #bdb76b;
+    border-radius: 10%;
+    color: #010e0e;
+    padding: 20px 5px 0px 10px;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .gridContainer__nota:hover {
+      transform: rotatey(-360deg);
+      transition: transform 2s; }
+
+.titulos {
+  font-weight: bold;
+  text-align: center;
+  color: #010e0e; }
 
 /*clase utilizada en catering, cakes y backingPallet*/
 .name {
@@ -9,47 +62,10 @@
   font-weight: bold; }
 
 .seccion {
-  height: 100vh;
   align-items: center;
-  justify-content: space-between;
-  font-size: 1em; }
+  justify-content: space-between; }
 
 /*hoja de inicio-index*/
-.gridContainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: "img1 img2x2 img2x2 nota1" "img2 img2x2 img2x2 nota2" "img3 novProm novProm nota3";
-  grid-gap: 10px;
-  padding: 5px;
-  grid-area: body; }
-  .gridContainer__protocol {
-    grid-area: nota1;
-    background-color: #bdb76b;
-    border-radius: 20px;
-    padding: 5px 10px 5px 10px;
-    text-align: left;
-    justify-content: center; }
-    .gridContainer__protocol h2 {
-      text-align: center;
-      color: #010e0e; }
-  .gridContainer__pagaCon {
-    grid-area: nota2; }
-    .gridContainer__pagaCon h2 {
-      text-align: center;
-      color: #010e0e; }
-  .gridContainer__nota {
-    grid-area: nota3;
-    background-color: #bdb76b;
-    list-style: none;
-    text-align: start;
-    border-radius: 10%;
-    color: #010e0e;
-    padding: 60px 5px 40px 10px; }
-    .gridContainer__nota:hover {
-      transform: rotatey(-360deg);
-      transition: transform 2s; }
-
 .muffin {
   list-style: square inside url(../imagenes/muffin.svg); }
 
@@ -59,80 +75,12 @@
   display: block;
   height: auto; }
 
-.indexBacking {
-  grid-area: img1; }
-
-.indexCakes {
-  grid-area: img2; }
-
-.indexCatering {
-  grid-area: img3; }
-
 .slider {
   grid-area: img2x2; }
   .slider .img {
     width: 100%; }
   .slider .h2 {
     display: block; }
-
-.img-overlay {
-  position: relative;
-  max-width: 300px; }
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgba(245, 219, 93, 0.5);
-  width: 100%;
-  transition: .5s ease;
-  opacity: 0;
-  color: #010e0e;
-  font-size: 2rem;
-  padding: 30px;
-  text-align: center; }
-
-.img-overlay:hover .overlay {
-  opacity: 1; }
-
-.novProm {
-  grid-area: novProm;
-  color: #010e0e;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll; }
-  .novProm .novProm-header {
-    text-align: center; }
-  .novProm .blockquote-footer {
-    text-align: center; }
-
-/*body del index*/
-.body {
-  display: grid;
-  background-color: #eee4b3;
-  font-family: "Josefin Sans", sans-serif;
-  margin: 2vh; }
-  .body--cakes {
-    grid-area: cakes; }
-  .body--catering {
-    grid-area: catering; }
-  .body--contactanos {
-    grid-area: contactanos; }
-  .body--ubicacion {
-    grid-area: ubicacion; }
-  .body--carrito {
-    grid-area: carrito; }
-  .body__h1 {
-    color: #022525;
-    text-align: center; }
-
-.cakes .catering .backingPallet {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas: "col col col col" "col col col col";
-  grid-area: body;
-  grid-gap: 10px;
-  padding: 5px; }
 
 .card .cantidad {
   padding: 5px;
