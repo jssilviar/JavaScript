@@ -50,6 +50,8 @@
     .gridContainer__nota:hover {
       transform: rotatey(-360deg);
       transition: transform 2s; }
+    .gridContainer__nota .consumo {
+      text-align: center; }
 
 .titulos {
   font-weight: bold;
@@ -69,43 +71,12 @@
 .muffin {
   list-style: square inside url(../imagenes/muffin.svg); }
 
-.img {
-  width: 100%;
-  border-radius: 20px;
-  display: block;
-  height: auto; }
-
 .slider {
   grid-area: img2x2; }
   .slider .img {
     width: 100%; }
   .slider .h2 {
     display: block; }
-
-.card .cantidad {
-  padding: 5px;
-  background-color: darkkhaki; }
-
-.card .card-title {
-  text-align: center; }
-
-.card .card-body {
-  background-color: darkkhaki;
-  text-align: center; }
-
-.card .card-link {
-  font-size: 15px;
-  color: #010e0e;
-  padding: 5px 5px;
-  cursor: pointer; }
-
-.card .list-group-item {
-  text-align: center;
-  background-color: #bdb76b; }
-
-.precio {
-  text-align: center;
-  background-color: #bdb76b; }
 
 /*hoja de carrito de compras*/
 .gridCarro {
@@ -118,35 +89,11 @@
 .resumen {
   grid-area: resumen; }
 
-.cardCarrito {
-  width: 15rem;
-  text-align: center; }
-
-.hp-image {
-  width: 80px;
-  height: 120px; }
-
 /*hoja ubicacion*/
-.ubicacion {
-  display: grid;
-  margin: 2%; }
-  .ubicacion h1 {
-    flex-grow: 1;
-    grid-area: h1; }
-  .ubicacion iframe {
-    flex-grow: 3;
-    grid-area: iframe; }
-  .ubicacion .notaUbicacion {
-    flex-grow: 1;
-    grid-area: nota;
-    background-color: #bdb76b;
-    text-align: start;
-    border-radius: 10%;
-    color: #010e0e;
-    padding: 60px 5px 40px 5px; }
-    .ubicacion .notaUbicacion .nota:hover {
-      transform: rotatey(-360deg);
-      transition: transform 2s; }
+.ubicanos {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
 
 .header {
   width: 100%;

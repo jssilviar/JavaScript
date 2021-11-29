@@ -223,6 +223,59 @@ $("#mostrarOcultar").click(function() {
     $("#detalleProductos").fadeToggle(1000);
 }); */
 
+//seccion contactanos
+const nombre = document.getElementById('nombre');
+const apeliidos = document.getElementById('apeliidos');
+const inputCity = document.getElementById('inputCity');
+const inputAddress = document.getElementById('inputAddress');
+const Email = document.getElementById('E-mail');
+const mensaje = document.getElementById('mensaje');
+const calendario = document.getElementById('calendario');
+const celular = document.getElementById('celular');
+error.style.color = '#ffc107';
+
+/* function enviarForm() {
+    if (nombre.value === null || nombre.value === '') {
+        mensajesError.push('Ingresa tu nombre');
+    }
+    if (apeliidos.value === null || apeliidos.value === '') {
+        mensajesError.push('Ingresa tus apellidos');
+    }
+    if (inputCity.value === null || inputCity.value === '') {
+        mensajesError.push('Ingresa tu dirección');
+    }
+    if (inputAddress.value === null || inputAddress.value === '') {
+        mensajesError.push('Indicanos alguna referencia');
+    }
+    if (Email.value === null || Email.value === '') {
+        mensajesError.push('Ingresa tu e-mail');
+    }
+    if (mensaje.value === null || mensaje.value === '') {
+        mensajesError.push('Dejanos un mensaje');
+    }
+    if (calendario.value === null || calendario.value === '') {
+        mensajesError.push('Ingresa la fecha aproximada de tu evento');
+    }
+    if (celular.value === null || celular.value === '') {
+        mensajesError.push('Indicanos tu N° de teléfono');
+    }
+
+    error.innerHTML = mensajesError.join(',')
+
+    retun: false
+} */
+const form = document.getElementById('formulario');
+form.addEventListener('submit', function(event) {
+    console.log("enviando formulario");
+
+})
+
+
+
+
+
+
+
 let enviar = document.getElementById("btnEnviar").onclick = () => {
 
     Swal.fire({

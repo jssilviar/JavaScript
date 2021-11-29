@@ -53,6 +53,9 @@
             transform: rotatey(-360deg);
             transition: transform 2s;
         }
+        .consumo {
+            text-align: center;
+        }
     }
 }
 
@@ -70,7 +73,7 @@
     font-weight: bold;
 }
 
-//desde aqui todo lo que va en seccion es del ejemplo
+//aplicado a todas las secciones
 .seccion {
     align-items: center;
     justify-content: space-between;
@@ -83,13 +86,6 @@
     list-style: square inside url(../imagenes/muffin.svg);
 }
 
-.img {
-    width: 100%;
-    border-radius: 20px;
-    display: block;
-    height: auto;
-}
-
 .slider {
     grid-area: img2x2;
     .img {
@@ -98,35 +94,6 @@
     .h2 {
         display: block;
     }
-}
-
-.card {
-    .cantidad {
-        padding: 5px;
-        background-color: $bg-card;
-    }
-    .card-title {
-        text-align: center;
-    }
-    .card-body {
-        background-color: $bg-card;
-        text-align: center;
-    }
-    .card-link {
-        font-size: 15px;
-        color: $bg-titulo;
-        padding: 5px 5px;
-        cursor: pointer;
-    }
-    .list-group-item {
-        text-align: center;
-        background-color: $bg-hf;
-    }
-}
-
-.precio {
-    text-align: center;
-    background-color: $bg-hf;
 }
 
 
@@ -144,41 +111,11 @@
     grid-area: resumen;
 }
 
-.cardCarrito {
-    width: 15rem;
-    text-align: center;
-}
-
-.hp-image {
-    width: 80px;
-    height: 120px;
-}
-
 
 /*hoja ubicacion*/
 
-.ubicacion {
-    display: grid;
-    margin: 2%;
-    h1 {
-        flex-grow: 1;
-        grid-area: h1;
-    }
-    iframe {
-        flex-grow: 3;
-        grid-area: iframe;
-    }
-    .notaUbicacion {
-        flex-grow: 1;
-        grid-area: nota;
-        background-color: $bg-hf;
-        text-align: start;
-        border-radius: 10%;
-        color: $bg-titulo;
-        padding: 60px 5px 40px 5px;
-        .nota:hover {
-            transform: rotatey(-360deg);
-            transition: transform 2s;
-        }
-    }
+.ubicanos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
