@@ -42,16 +42,14 @@
     background-color: #bdb76b;
     border-radius: 10%;
     color: #010e0e;
-    padding: 20px 5px 0px 10px;
     font-size: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
     .gridContainer__nota:hover {
       transform: rotatey(-360deg);
       transition: transform 2s; }
-    .gridContainer__nota .consumo {
-      text-align: center; }
 
 .titulos {
   font-weight: bold;
@@ -93,6 +91,9 @@
 .ubicanos {
   display: flex;
   flex-direction: column;
+  text-align: center; }
+
+.card-body {
   text-align: center; }
 
 .header {
@@ -189,20 +190,10 @@
     font-weight: bold; }
 
 @media only screen and (max-width: 1024px) {
-  .contenedor li a {
-    font-size: 15px; }
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto); }
   .gridContainer {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "img1 img2 img3" "img2x2 img2x2 img2x2" "novProm novProm novProm" "nota1 nota2 nota3"; }
-  .row {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, auto);
-    grid-template-areas: "col col" "col col" "col col";
-    justify-content: center; } }
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "img2x2 img2x2 img2x2 img2x2" "novProm novProm protocol protocol" "pagaCon pagaCon notaDscto notaDscto"; } }
 
 @media only screen and (max-width: 768px) {
   .body {
@@ -212,21 +203,11 @@
     font-size: 18px; }
     .body .main {
       text-align: -webkit-center; }
-  .contenedor li a {
-    font-size: 15px; }
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, auto); }
   .gridContainer {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(8, auto);
-    grid-template-areas: "img1" "img2" "img3" "img2x2" "novProm" "nota1" "nota2" "nota3";
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "novProm" "img2x2" "protocol" "pagaCon" "notaDscto";
     text-align: -webkit-center; }
-  .row {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, auto);
-    grid-template-areas: "col" "col" "col" "col" "col" "col";
-    justify-content: center; }
   .footer {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
@@ -235,13 +216,7 @@
       font-size: 46px;
       justify-content: center; }
     .footer__datos {
-      text-align: center; }
-  .ubicacion {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: "h1" "iframe" "nota"; }
-  .video {
-    width: 80%; } }
+      text-align: center; } }
 
 .body-error {
   background-color: #eee4b3; }

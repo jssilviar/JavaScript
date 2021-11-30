@@ -44,17 +44,14 @@
         background-color: $bg-hf;
         border-radius: 10%;
         color: $bg-titulo;
-        padding: 20px 5px 0px 10px;
         font-size: $textMedium;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         &:hover {
             transform: rotatey(-360deg);
             transition: transform 2s;
-        }
-        .consumo {
-            text-align: center;
         }
     }
 }
@@ -117,5 +114,9 @@
 .ubicanos {
     display: flex;
     flex-direction: column;
+    text-align: center;
+}
+
+.card-body {
     text-align: center;
 }
