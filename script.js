@@ -1,3 +1,52 @@
+/* let gridCarro = document.getElementById("gridCarro");
+//llamar json de productos
+function cargarProductos() {
+    fetch('./productos.json')
+        .then(data => console.log(data.json()))
+        // .then(p)
+}
+ 
+cargarProductos()*/
+
+
+let contenido = document.querySelector('#resumen');
+
+function anadir (){
+    fetch('productos.json')
+        .then(res => res.json() )
+        .then( datos => {
+            //console.log(datos)
+            tabla(datos)
+    } )
+    
+}
+
+function tabla(datos){
+    console.log(datos)
+    resumen.innerHTML = ''
+    for(let valor of datos){
+        console.log(valor)
+        /* resumen.innerHTML += `
+
+        <tr>
+            <th scope="row">${valor.nombre}</th>
+            <th>${valor.imagen}</th>
+            <th>${valor.precio}</th>
+            <th>${valor.cantidad}</th>
+        </tr>
+        ` */
+    }
+    
+    
+    
+    
+
+}
+
+
+
+
+
 /* //cambiando de color en la nav
 const backingPallet = document.querySelector('#backingPallet');
 const cakes = document.querySelector('#cakes');
@@ -53,15 +102,6 @@ if (localStorage.getItem("carrito")) {
     localStorage.removeItem("carrito");
 }
 
-let gridCarro = document.getElementById("gridCarro");
-//llamar json de productos
-function cargarProductos() {
-    fetch('./productos.json')
-        .then(data => console.log(data.json()))
-        // .then(p)
-} */
-
-//cargarProductos()
 /* 
 
 for (const producto of productos) {
