@@ -1,26 +1,31 @@
+
 .footer {
     background-color: $bg-hf;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr auto;
-    grid-template-areas: "contacto info1 iconos" "copyright copyright copyright";
+    font-family: $fontMain;
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     &__contacto {
         padding: 10px;
         font-size: 50px;
-        grid-area: contacto;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
         color: $bg-titulo
     }
     &__datos {
-        grid-area: info1;
+        padding: 20px 0 20px 0;
         text-align: left;
+        p {
+            font-size: $textAlmostMedium;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
     }
     &__social {
         display: flex;
-        justify-content: space-around;
+        flex-direction: row;
         align-items: center;
+        gap: 50px;
         a {
             img {
                 width: 40px;
@@ -41,11 +46,7 @@
     }
     &__copyright {
         text-align: center;
-        grid-area: copyright;
         background-color: $bg-fondo;
-    }
-    .name {
-        font-size: big;
-        font-weight: bold;
+        font-weight: bolder;
     }
 }

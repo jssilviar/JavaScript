@@ -1,8 +1,13 @@
 //body del index
-.body {
+body{
     background-color: $bg-fondo;
     font-family: $fontMain;
-    padding: 1%;
+}
+section {
+    padding: 20px 0 20px 0;
+}
+.redondeado {
+    border-radius: $mi-border-radius;
 }
 
 //grid de la seccion inicio
@@ -16,7 +21,7 @@
         grid-area: protocol;
         background-color: $bg-hf;
         font-size: $textAlmostMedium;
-        border-radius: 20px;
+        border-radius: $mi-border-radius;
         text-align: justify;
         display: flex;
         flex-direction: column;
@@ -42,7 +47,7 @@
     &__nota {
         grid-area: notaDscto;
         background-color: $bg-hf;
-        border-radius: 10%;
+        border-radius: $mi-border-radius;
         color: $bg-titulo;
         font-size: $textMedium;
         display: flex;
@@ -62,25 +67,17 @@
     color: $bg-titulo;
 }
 
-
 /*clase utilizada en catering, cakes y backingPallet*/
-
 .name {
-    font-size: big;
     font-weight: bold;
 }
 
-//aplicado a todas las secciones
-.seccion {
-    align-items: center;
-    justify-content: space-between;
-}
-
-
 /*hoja de inicio-index*/
-
 .muffin {
-    list-style: square inside url(../imagenes/muffin.svg);
+    list-style: square inside url(../img/muffin.svg);
+    ul {
+        padding-left: 0;
+    }
 }
 
 .slider {
@@ -97,7 +94,6 @@
 /*hoja de carrito de compras*/
 
 .gridCarro {
-    grid-area: carrito;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -106,8 +102,17 @@
 
 .resumen {
     grid-area: resumen;
+        .imgResumen{
+            height: 100px;
+            width: 80px;
+        }
 }
-
+.detalle {
+    grid-area: detalle;
+}
+.delete {
+    cursor: pointer;
+}
 
 /*hoja ubicacion*/
 
@@ -116,7 +121,25 @@
     flex-direction: column;
     text-align: center;
 }
-
+.card{
+    border: transparent;
+    background-color: transparent;
+}
 .card-body {
+    text-align: center;
+}
+
+//seccion contactanos
+#mandarCorreo{
+    opacity: 0;
+}
+
+//Desaparece indicadores de aumentar y dismuir en input type number
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.unidades{
     text-align: center;
 }

@@ -1,18 +1,18 @@
 {
     "productos": [{
             "id": 1,
-            "nombre": "Mobiliario Blanco&Plateado",
+            "nombre": "Mobiliario Blanco & Plateado",
             "imagen": "palletBlanco.png",
             "desc": "Cómoda, circulares 3 medidas: 80cm, 60cm y 40cm.Ideal para eventos de bautizos, cumpleaños.",
-            "precio": "Desde S/ 220.00",
+            "precio": 220.00,
             "categoria": "backingPallet"
         },
         {
             "id": 2,
-            "nombre": "Pallet Rústico&mesas Blancas",
-            "imagen": "palletBlanco.png",
+            "nombre": "Pallet Rústico",
+            "imagen": "palletElefante.png",
             "desc": "Pallet rústico de rayas horizontales. Medida: 200 x 250cm. Mesas rectangulares 2 medidas + 2 jarrones. ",
-            "precio": "Desde S/250.00",
+            "precio": 250.00,
             "categoria": "backingPallet"
         },
         {
@@ -20,7 +20,7 @@
             "nombre": "Escalera",
             "imagen": "palletEscalera.png",
             "desc": "Escalera 3 niveles rústico (color marrón), ideal para sospresas o recuerdos.",
-            "precio": "Desde S/150.00",
+            "precio": 150.00,
             "categoria": "backingPallet"
         },
         {
@@ -28,7 +28,7 @@
             "nombre": "Circulares",
             "imagen": "palletGol.png",
             "desc": "Mobiliarios de 3 medidas: 120cm, 100cm y 80cm.",
-            "precio": "Desde S/200.00",
+            "precio": 200.00,
             "categoria": "backingPallet"
         },
         {
@@ -36,15 +36,15 @@
             "nombre": "Mobiliario",
             "imagen": "palletKoemi.png",
             "desc": "2 copas, 3 fuentes, 1 porta-torta y canasta.",
-            "precio": "Desde S/100.00",
+            "precio": 100.00,
             "categoria": "backingPallet"
         },
         {
             "id": 6,
-            "nombre": "Circulares Rústicos&Pallet",
+            "nombre": "Circulares Rústicos & Pallet",
             "imagen": "palletOsos.png",
             "desc": "3 cilindros rusticos de medida: 120cm, 100cm y 80cm + mesita +silla.",
-            "precio": "Desde S/230.00",
+            "precio": 230.00,
             "categoria": "backingPallet"
         },
         {
@@ -52,7 +52,7 @@
             "nombre": "Bautizo",
             "imagen": "tortaBautizo.png",
             "desc": "Keke de vainilla, chocolate o chocochip, de medidas #18, #20, #24, #26, forrado con fontdant, chantilly o masa elástica.Decorado a gusto.",
-            "precio": "Desde S/250.00",
+            "precio": 250.00,
             "categoria": "cakes"
         },
         {
@@ -60,7 +60,7 @@
             "nombre": "Cumpleaños Infantiles",
             "imagen": "tortaOlaf.png",
             "desc": "Keke de vainilla, chocolate o chocochip, de medidas #18, #20, #24, #26, forrado con fontdant, chantilly o masa elástica.Decorado a gusto.",
-            "precio": "Desde S/250.00",
+            "precio": 250.00,
             "categoria": "cakes"
         },
         {
@@ -68,7 +68,7 @@
             "nombre": "Minecraft",
             "imagen": "tortaMinecraf.png",
             "desc": "Keke de vainilla, chocolate o chocochip, de medidas #18, #20, #24, #26, forrado con fontdant, chantilly o masa elástica.Decorado a gusto.",
-            "precio": "Desde S/180.00",
+            "precio": 180.00,
             "categoria": "cakes"
         },
         {
@@ -76,7 +76,7 @@
             "nombre": "Baby Shower",
             "imagen": "tortaBabyShower.png",
             "desc": "Keke de vainilla, chocolate o chocochip, de medidas #18, #20, #24, #26, forrado con fontdant, chantilly o masa elástica.Decorado a gusto.",
-            "precio": "Desde S/230.00",
+            "precio": 230.00,
             "categoria": "cakes"
         },
         {
@@ -84,7 +84,7 @@
             "nombre": "Matrimonio",
             "imagen": "tortaMatrimonio.png",
             "desc": "Keke de vainilla, chocolate o chocochip, o especial de medidas #18, #20, #24, #26, #30 forrado con fontdant, chantilly o masa elástica.Decorado al gusto..",
-            "precio": "Desde S/350.00",
+            "precio": 350.00,
             "categoria": "cakes"
         },
         {
@@ -92,7 +92,7 @@
             "nombre": "Graduación",
             "imagen": "tortaGraduacion.png",
             "desc": "Keke de vainilla, chocolate o chocochip, de medidas #18, #20, #24, #26, forrado con fontdant, chantilly o masa elástica.Decorado a gusto.",
-            "precio": "Desde S/210.00",
+            "precio": 210.00,
             "categoria": "cakes"
         },
         {
@@ -100,7 +100,7 @@
             "nombre": "Chocomanzanas",
             "imagen": "manzanas.png",
             "desc": "Paquete x6 unidades,bañadas en caramelo, chocolate o forradas con fontdant personalizados.",
-            "precio": "Desde S/30.00",
+            "precio": 30.00,
             "categoria": "catering"
         },
         {
@@ -108,7 +108,7 @@
             "nombre": "Alfajores",
             "imagen": "alfajores.png",
             "desc": "Paquete x6 unidades, relleno de manjar blanco y cubierto por masa elástica o azúcar impalpable.",
-            "precio": "Desde S/45.00",
+            "precio": 45.00,
             "categoria": "catering"
         },
         {
@@ -116,7 +116,7 @@
             "nombre": "Cup Cakes",
             "imagen": "cupcakeElefante.png",
             "desc": "Paquete desde 6 unidades, masa de vainilla, chocolate o chocochip. Personalizados.",
-            "precio": "Desde S/60.00",
+            "precio": 60.00,
             "categoria": "catering"
         },
         {
@@ -124,7 +124,7 @@
             "nombre": "Galletas Personalizada",
             "imagen": "galletas.png",
             "desc": "Paquete x6 unidades,vainilla, chocolate o chocochip, de la forma que quieras y adornados con masa elástica o manjar.",
-            "precio": "Desde S/30.00",
+            "precio": 30.00,
             "categoria": "catering"
         },
         {
@@ -132,7 +132,7 @@
             "nombre": "Galletas",
             "imagen": "galletasConstruccion.png",
             "desc": "Paquete x6 unidades, hechas de harina o maizena, personalizados.",
-            "precio": "Desde S/25.00",
+            "precio": 25.00,
             "categoria": "catering"
         },
         {
@@ -140,7 +140,7 @@
             "nombre": "Brownies",
             "imagen": "brownie.png",
             "desc": "Paquete x6 unidades, personalizados.",
-            "precio": "Desde S/30.00",
+            "precio": 30.00,
             "categoria": "catering"
         }
 
