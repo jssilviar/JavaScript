@@ -198,6 +198,11 @@ function handleSubmit(event) {
     MENSAJE: ${mensaje}`;
     mandarCorreo.setAttribute('href', `mailto:jssilviar@gmail.com?subject=${encabezado}&body=${body}`);
     mandarCorreo.click();
+    Swal.fire(
+        `En breve nos contactaremos contigo`,
+        '¡Gracias por tu preferencia!',        
+        'success'
+    );
     this.reset();
 }
 
